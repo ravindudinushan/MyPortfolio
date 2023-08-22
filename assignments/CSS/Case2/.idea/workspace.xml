@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fedf4058-3065-4fba-b093-b289e30a38a4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../Case1/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Case1/.idea/Case1.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Case1/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Case1/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Case1/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assest/ijse.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assest/monkey.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assest/necolas.github.io_normalize.css_8.0.1_normalize.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +65,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1692702683060</updated>
-      <workItem from="1692702684896" duration="7513000" />
+      <workItem from="1692702684896" duration="8946000" />
     </task>
     <servers />
   </component>
