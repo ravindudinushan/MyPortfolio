@@ -5,108 +5,202 @@
     <title>Case 1</title>
     <meta name="viewport" content="width=device-width initial-scale=1">
     <link rel="stylesheet" href="assest/necolas.github.io_normalize.css_8.0.1_normalize.css">
-
     <style>
-        header{
-            border: 1px solid black;
-        }
-        header>img{
-            width: 100px;
-        }
-        menu{
-            position: absolute;
-            top: 8px;
-            right: 50px;
-            margin: auto;
-            font-size: small;
-        }
-        section>section:first-child{
-            position: absolute;
-            width: 20vw;
-            height: 100vh;
-            background-color: purple;
-        }
-        section>section:first-child>p{
+        header {
+            inline-size: 100%;
+            block-size: 50px;
             position: relative;
-            color: white;
+        }
+
+        header>div>img {
+            position: absolute;
             left: 20px;
+            width: 200px;
         }
-        section>section:nth-child(2)>img{
+
+        header>section>nav>ul>li {
+            display: inline-block;
+            margin-inline-end: 15px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        header>section {
+            text-align: end;
+            display: inline-block;
+            inline-size: fit-content;
+            margin-inline-end: 40px;
+            margin-block-start: 5px;
+            position: absolute;
+            inset-inline-end: 0%;
+        }
+
+        main {
             position: relative;
-            width: 330px;
-            height: 250px;
-            left: 260px;
-            top: 2px;
-            border: 1px solid green;
+            margin: 0;
         }
-        div{
+
+        main>section:first-child {
+            background: purple;
+            width: 20%;
+            position: absolute;
+            block-size: 100%;
+        }
+
+        main>section:first-child>nav>ul {
+            padding-inline-start: 35px;
+            padding-block-start: 20px;
+        }
+
+        main>section:first-child>nav>ul>li {
+            margin-block-end: 15px;
+            font-family: 'Poppins', sans-serif;
+        }
+        nav>ul {
+            list-style: none;
+        }
+        main>section:first-child>nav {
+            color: white;
+        }
+
+        main>section:nth-child(2) {
             position: relative;
-            left: 260px;
-            width: 990px;
+            inset-inline-start: 21vw;
+            border-top: 5px solid black;
+            width: 80%;
+            left: 20%;
         }
+
+        main>section:nth-child(2)>section:nth-child(2) {
+            padding-bottom: 10px;
+            padding-left: 10px;
+        }
+
+        main>section:nth-child(2)>section:nth-child(2)>p {
+            width: 100%;
+            font-family: 'Nunito Sans', sans-serif;
+        }
+
+        main>section:nth-child(2)>section:first-child {
+            font-size: 0;
+            padding-top: 6px;
+            margin-bottom: 15px;
+            padding-left: 10px;
+        }
+
+        main>section:nth-child(2)>section:first-child>div {
+            box-sizing: border-box;
+            display: inline-block;
+            max-width: 33%;
+        }
+
+        main>section:nth-child(2)>section:first-child>div>img {
+            width: 100%;
+            border-bottom: 2px solid green;
+            border-top: 2px solid rgb(154, 0, 0);
+
+        }
+
+        main>section:nth-child(2)>section:first-child>div:first-child>img{
+            border-left: 2px solid rgb(154, 0, 0);
+        }
+
+        main>section:nth-child(2)>section:first-child>div:nth-child(2)>img{
+            border-left: 2px solid green;
+        }
+
+        main>section:nth-child(2)>section:first-child>div:nth-child(3)>img{
+            border-right: 2px solid rgb(154, 0, 0);
+            border-left: 2px solid green;
+        }
+
         footer{
             position: relative;
             width: 1262px;
             height: 40px;
             background-color: gray;
         }
+
         footer>p{
             position: absolute;
             top: 13px;
             left: 615px;
             margin: auto;
             color: white;
-
         }
-    </style>
 
+    </style>
 </head>
+
 <body>
+
 <header>
-    <img src="assest/ijse.png">
-    <nav>
-        <menu>
-            <a href="">Home</a>
-            <a href="">Services</a>
-            <a href="">Contact</a>
-            <a href="">About Us</a>
-        </menu>
-    </nav>
+    <div>
+        <img src="assest/ijse.png" alt="">
+    </div>
+    <section>
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li>Services</li>
+                <li>Contacts</li>
+                <li>About Us</li>
+            </ul>
+        </nav>
+    </section>
 </header>
 <main>
     <section>
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li>Services</li>
+                <li>Contacts</li>
+                <li>About Us</li>
+            </ul>
+        </nav>
+    </section>
+    <section>
         <section>
-            <p>Home</p>
-            <p>Services</p>
-            <p>Contacts</p>
-            <p>About Us</p>
+            <div>
+                <img src="assest/monkey.gif" alt="">
+            </div>
+            <div>
+                <img src="assest/monkey.gif" alt="">
+            </div>
+            <div>
+                <img src="assest/monkey.gif" alt="">
+            </div>
         </section>
         <section>
-            <img src="assest/monkey.gif">
-            <img src="assest/monkey.gif">
-            <img src="assest/monkey.gif">
-        </section>
-        <div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aut, corporis dolorum facere hic id illo nihil odio quam quis suscipit vero voluptatibus. Consequuntur itaque laudantium provident suscipit temporibus unde?</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aut, corporis dolorum facere hic id illo nihil odio quam quis suscipit vero voluptatibus. Consequuntur itaque laudantium provident suscipit temporibus unde?</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aut, corporis dolorum facere hic id illo nihil odio quam quis suscipit vero voluptatibus. Consequuntur itaque laudantium provident suscipit temporibus unde?</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aut, corporis dolorum facere hic id illo nihil odio quam quis suscipit vero voluptatibus. Consequuntur itaque laudantium provident suscipit temporibus unde?</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aut, corporis dolorum facere hic id illo nihil odio quam quis suscipit vero voluptatibus. Consequuntur itaque laudantium provident suscipit temporibus unde?</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aut, corporis dolorum facere hic id illo nihil odio quam quis suscipit vero voluptatibus. Consequuntur itaque laudantium provident suscipit temporibus unde?</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aut, corporis dolorum facere hic id illo nihil odio quam quis suscipit vero voluptatibus. Consequuntur itaque laudantium provident suscipit temporibus unde?</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aut, corporis dolorum facere hic id illo nihil odio quam quis suscipit vero voluptatibus. Consequuntur itaque laudantium provident suscipit temporibus unde?</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aut, corporis dolorum facere hic id illo nihil odio quam quis suscipit vero voluptatibus. Consequuntur itaque laudantium provident suscipit temporibus unde?</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aut, corporis dolorum facere hic id illo nihil odio quam quis suscipit vero voluptatibus. Consequuntur itaque laudantium provident suscipit temporibus unde?</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aut, corporis dolorum facere hic id illo nihil odio quam quis suscipit vero voluptatibus. Consequuntur itaque laudantium provident suscipit temporibus unde?</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aut, corporis dolorum facere hic id illo nihil odio quam quis suscipit vero voluptatibus. Consequuntur itaque laudantium provident suscipit temporibus unde?</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aut, corporis dolorum facere hic id illo nihil odio quam quis suscipit vero voluptatibus. Consequuntur itaque laudantium provident suscipit temporibus unde?</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aut, corporis dolorum facere hic id illo nihil odio quam quis suscipit vero voluptatibus. Consequuntur itaque laudantium provident suscipit temporibus unde?</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aspernatur atque aut commodi cupiditate, deserunt dolorem doloremque est et eum fugiat id incidunt iste laudantium maxime rerum tempore veniam voluptas!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aspernatur atque aut commodi cupiditate, deserunt dolorem doloremque est et eum fugiat id incidunt iste laudantium maxime rerum tempore veniam voluptas!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aspernatur atque aut commodi cupiditate, deserunt dolorem doloremque est et eum fugiat id incidunt iste laudantium maxime rerum tempore veniam voluptas!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aspernatur atque aut commodi cupiditate, deserunt dolorem doloremque est et eum fugiat id incidunt iste laudantium maxime rerum tempore veniam voluptas!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aspernatur atque aut commodi cupiditate, deserunt dolorem doloremque est et eum fugiat id incidunt iste laudantium maxime rerum tempore veniam voluptas!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aspernatur atque aut commodi cupiditate, deserunt dolorem doloremque est et eum fugiat id incidunt iste laudantium maxime rerum tempore veniam voluptas!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aspernatur atque aut commodi cupiditate, deserunt dolorem doloremque est et eum fugiat id incidunt iste laudantium maxime rerum tempore veniam voluptas!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aspernatur atque aut commodi cupiditate, deserunt dolorem doloremque est et eum fugiat id incidunt iste laudantium maxime rerum tempore veniam voluptas!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aspernatur atque aut commodi cupiditate, deserunt dolorem doloremque est et eum fugiat id incidunt iste laudantium maxime rerum tempore veniam voluptas!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aspernatur atque aut commodi cupiditate, deserunt dolorem doloremque est et eum fugiat id incidunt iste laudantium maxime rerum tempore veniam voluptas!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aspernatur atque aut commodi cupiditate, deserunt dolorem doloremque est et eum fugiat id incidunt iste laudantium maxime rerum tempore veniam voluptas!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aspernatur atque aut commodi cupiditate, deserunt dolorem doloremque est et eum fugiat id incidunt iste laudantium maxime rerum tempore veniam voluptas!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aspernatur atque aut commodi cupiditate, deserunt dolorem doloremque est et eum fugiat id incidunt iste laudantium maxime rerum tempore veniam voluptas!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aspernatur atque aut commodi cupiditate, deserunt dolorem doloremque est et eum fugiat id incidunt iste laudantium maxime rerum tempore veniam voluptas!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aspernatur atque aut commodi cupiditate, deserunt dolorem doloremque est et eum fugiat id incidunt iste laudantium maxime rerum tempore veniam voluptas!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aspernatur atque aut commodi cupiditate, deserunt dolorem doloremque est et eum fugiat id incidunt iste laudantium maxime rerum tempore veniam voluptas!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aspernatur atque aut commodi cupiditate, deserunt dolorem doloremque est et eum fugiat id incidunt iste laudantium maxime rerum tempore veniam voluptas!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aspernatur atque aut commodi cupiditate, deserunt dolorem doloremque est et eum fugiat id incidunt iste laudantium maxime rerum tempore veniam voluptas!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aspernatur atque aut commodi cupiditate, deserunt dolorem doloremque est et eum fugiat id incidunt iste laudantium maxime rerum tempore veniam voluptas!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aspernatur atque aut commodi cupiditate, deserunt dolorem doloremque est et eum fugiat id incidunt iste laudantium maxime rerum tempore veniam voluptas!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aspernatur atque aut commodi cupiditate, deserunt dolorem doloremque est et eum fugiat id incidunt iste laudantium maxime rerum tempore veniam voluptas!</p>
 
-        </div>
+        </section>
     </section>
 </main>
 <footer>
-    <p>Developed by IJSE</p>
+    <p>Developed By IJSE</p>
 </footer>
+
 </body>
+
 </html>
