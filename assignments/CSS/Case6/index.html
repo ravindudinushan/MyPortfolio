@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Case 6</title>
+    <meta name="viewport" content="width=device-width initial-scale=1">
+    <link rel="stylesheet" href="../Case2/assest/necolas.github.io_normalize.css_8.0.1_normalize.css">
+
+    <style>
+        section{
+            width: 100vw;
+            height: 100vh;
+            display: grid;
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            margin-left: 0;
+            margin-bottom: 0;
+        }
+        section>div{
+            border: 1px solid black;
+        }
+        section>div:first-child{
+            grid-column: 1/3;
+            background: url("assest/1.jpg");
+            background-size: cover;
+        }
+        section>div:nth-child(2){
+            background: url("assest/2.jpg");
+            background-size: cover;
+        }
+        section>div:nth-child(3){
+            grid-column: 4/5;
+            grid-row: 1/4;
+            background: url("assest/3.jpg");
+            background-size: cover;
+        }
+        section>div:nth-child(4){
+            background: url("assest/4.jpg");
+            background-size: cover;
+        }
+        section>div:nth-child(5){
+            background: url("assest/5.jpg");
+            background-size: cover;
+        }
+        section>div:nth-child(6){
+            background: url("assest/6.jpg");
+            background-size: cover;
+        }
+        section>div:nth-child(7){
+            grid-column: 1/3;
+            background: url("assest/7.jpg");
+            background-size: cover;
+        }
+        section>div:last-child{
+            background: url("assest/8.jpg");
+            background-size: cover;
+        }
+    </style>
+
+</head>
+<body>
+<section>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</section>
+</body>
+</html>
