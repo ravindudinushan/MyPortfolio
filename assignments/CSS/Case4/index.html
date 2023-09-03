@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Case 4</title>
+    <meta name="viewport" content="width=device-width initial-scale=1">
+    <link rel="stylesheet" href="../Case2/assest/necolas.github.io_normalize.css_8.0.1_normalize.css">
+    <style>
+        section{
+            height: 100vh;
+            position: relative;
+        }
+        body>section:first-child>header{
+            background-color: red;
+        }
+        body>section:nth-child(2)>header{
+            background-color: darkblue;
+        }
+        body>section:nth-child(3)>header{
+            background-color: black;
+        }
+        body>section:last-child>header{
+            background-color: darkred;
+        }
+        body>section:nth-child(2){
+            background-color: blue;
+        }
+        body>section:nth-child(3){
+            background-color: #444141;
+        }
+        body>section:last-child{
+            background-color: red;
+        }
+        header{
+            position: sticky;
+            margin: 0;
+            height: 50px;
+            color: white;
+            top: 0;
+        }
+        header>h3 {
+            margin-top: 0;
+            padding-top: 15px;
+            margin-left: 10px;
+        }
+        section>h1 {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            margin: auto;
+            width: max-content;
+            height: max-content;
+            font-size: 100px;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <h1>Hello</h1>
+        <header><h3>Card 1</h3></header>
+    </section>
+    <section>
+        <h1>How</h1>
+        <header><h3>Card 2</h3></header>
+    </section>
+    <section>
+        <h1>Are</h1>
+        <header><h3>Card 3</h3></header>
+    </section>
+    <section>
+        <h1>You..?</h1>
+        <header><h3>Card 4</h3></header>
+    </section>
+</body>
+</html>
