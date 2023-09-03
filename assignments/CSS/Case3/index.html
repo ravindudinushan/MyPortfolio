@@ -6,119 +6,91 @@
     <meta name="viewport" content="width=device-width initial-scale=1">
     <link rel="stylesheet" href="../Case2/assest/necolas.github.io_normalize.css_8.0.1_normalize.css">
     <style>
-      main{
-        width: 100%;
-        height: 264.1vh;
-      }
-      body>main>section:first-child{
-        width: 100%;
-        height: 100vh;
-      }
-      body>main>section:nth-child(2){
-        width: 100%;
-        height: 100vh;
-      }
-      body>main>section:nth-child(3){
-        width: 100%;
-        height: 64.1vh;
-      }
-      body>main>section:first-child>div:first-child{
-        position: fixed;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        margin: auto;
-        width: 200px;
-        height: 200px;
-        border-radius: 100%;
-        background-color: gray;
-      }
-      body>main>section:first-child>div:nth-child(2){
-        position: fixed;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        margin: auto;
-        width: 180px;
-        height: 180px;
-        border-radius: 100%;
-        background-color: red;
-      }
-      body>main>section:first-child>div:nth-child(3){
-        position: fixed;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        margin: auto;
-        width: 160px;
-        height: 160px;
-        border-radius: 100%;
-        background-color: white;
-      }
-      body>main>section:first-child>div:nth-child(4){
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        margin: auto;
-        width: 160px;
-        height: 160px;
-        border-radius: 100%;
-        background-color: purple;
-      }
-      .middle {
-        color: white;
-        position: absolute;
-        margin: 0;
-        text-align: center;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-      }
-      body>main>:nth-child(2)>div{
-        position: relative;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        margin: auto;
-        width: 160px;
-        height: 160px;
-        border-radius: 100%;
-        background-color: deepskyblue;
-      }
-      body>main>:nth-child(3)>div{
-        position: relative;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        margin: auto;
-        width: 160px;
-        height: 160px;
-        border-radius: 100%;
-        background-color: deeppink;
-      }
+        body>section {
+            height: 100vh;
+            position: relative;
+        }
+        body>section:first-child>div:nth-child(2) {
+            position: fixed;
+            width: 250px;
+            height: 250px;
+            border-radius: 100%;
+            border: 15px solid grey;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+
+        body>section:first-child>div>div {
+            position: fixed;
+            width: 225px;
+            height: 225px;
+            border-radius: 100%;
+            border: 15px solid red;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+        .middle {
+            position: absolute;
+            width: 225px;
+            height: 225px;
+            border-radius: 100%;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+        h1 {
+            position: absolute;
+            color: white;
+            text-align: center;
+            margin: 0;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        body>section:first-child>div:first-child{
+            background-color: purple;
+        }
+        body>section:nth-child(2)>div{
+            background-color: deepskyblue;
+        }
+        body>section:nth-child(3)>div{
+            background-color: deeppink;
+        }
+        body>section:first-child {
+            z-index: 2;
+        }
+        body>section:nth-child(2) {
+            z-index: 1;
+        }
     </style>
 </head>
 <body>
-  <main>
-  <section>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div><p class="middle">Hello</p></div>
-  </section>
-  <section>
-    <div><p class="middle">Welcome To</p></div>
-  </section>
-  <section>
-    <div><p class="middle">Institute of Software Engineering</p></div>
-  </section>
-  </main>
+<section>
+    <div class="middle">
+        <h1>Hello</h1>
+    </div>
+    <div>
+        <div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="middle">
+        <h1>Welcome To</h1>
+    </div>
+</section>
+<section>
+    <div class="middle">
+        <h1>Institute of Software Engineering</h1>
+    </div>
+</section>
 </body>
 </html>
