@@ -11,12 +11,72 @@
     <meta name="owner" content="Ravindu Dinushan">
     <meta name="author" content="Ravindu Dinushan">
     <meta name="theme-color" content="red">
+    <meta name="viewport" content="width=device-width initial-scale=1">
+    <link rel="stylesheet" href="assets/necolas.github.io_normalize.css_8.0.1_normalize.css">
+    
+    <style>
+        ul, li, ol {
+            list-style: none;
+            margin: 0px;
+            padding: 0px;
+        }
+        header{
+            background-image: url("assets/header_img.png");
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            margin: 0 auto;
+            z-index: 20;
+            background-position: left;
+            background-repeat: no-repeat;
+            background-color: #0892fd;
+            background-size: auto 100%;
+        }
+        body{
+            margin-top: -22px;
+            color: #666666;
+            font-size: 15px;
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.80857;
+        }
+        a {
+            color: #ffffff;
+            text-decoration: none;
+            outline: none;
+        }
+        menu>li{
+            display: inline-block;
+        }
+        h1 {
+            font-size: 24px
+        }
+        h2 {
+            font-size: 22px
+        }
+        h3 {
+            font-size: 18px
+        }
+        h4 {
+            font-size: 21px;
+            color: #07528d;
+            margin-top: 25px;
+        }
+        h5 {
+            font-size: 14px
+        }
+        h6 {
+            font-size: 13px
+        }
+    </style>
+
 </head>
 <body>
     <header>
-        <section><h1>MyPortfolio</h1></section>
-        <nav>
-            <menu>
+        <div><h1>MyPortfolio</h1></div>
+        <div>
+            <nav>
+                <menu>
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>   
                     <li><a href="#services">Services</a></li>   
@@ -24,8 +84,9 @@
                     <li><a href="#project">Project</a></li>    
                     <li><a href="#gallery">Gallery</a></li>    
                     <li><a href="#contact">Contact</a></li>    
-            </menu>
-        </nav>
+                </menu>
+            </nav>
+        </div>
     </header>
 
     <main>
