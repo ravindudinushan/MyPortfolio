@@ -26,6 +26,7 @@
             top: 0px;
             left: 0px;
             width: 100%;
+            height: 17.5%;
             margin: 0 auto;
             z-index: 20;
             background-position: left;
@@ -39,6 +40,7 @@
             font-size: 15px;
             font-family: 'Poppins', sans-serif;
             line-height: 1.80857;
+            margin-right: 0;
         }
         a {
             color: #ffffff;
@@ -48,26 +50,50 @@
         menu>li{
             display: inline-block;
         }
-        h1 {
-            font-size: 24px
+        nav>menu {
+            text-transform: uppercase;
+            font-size: 15px;
+            position: absolute;
+            margin: 0;
+            top: 40%;
+            left: 40%;
         }
-        h2 {
-            font-size: 22px
+        menu>li{
+            margin-inline-end: 25px;
         }
-        h3 {
-            font-size: 18px
+        header>:first-child{
+            position: relative;
+            font-size: 18px;
+            left: 80px;
+            bottom: 10px;
         }
-        h4 {
-            font-size: 21px;
-            color: #07528d;
-            margin-top: 25px;
+        header>:last-child{
+            width: 100%;
+            background: black;
+            height: 5px;
+            position: relative;
+            bottom: 19px;
         }
-        h5 {
-            font-size: 14px
+        main>section>section>hgroup>h1{
+            position: relative;
+            top: 120px;
+            left: 30px;
+            font-size: 40px;
         }
-        h6 {
-            font-size: 13px
+        main>section>section>hgroup>h4{
+            position: relative;
+            top: 80px;
+            left: 30px;
+            font-size: 22px;
+            font-weight: inherit;
         }
+        main>section:first-child{
+            background: #D9D9D9;
+        }
+        main>section>section>div:last-child{
+
+        }
+
     </style>
 
 </head>
@@ -76,17 +102,18 @@
         <div><h1>MyPortfolio</h1></div>
         <div>
             <nav>
-                <menu>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>   
-                    <li><a href="#services">Services</a></li>   
-                    <li><a href="#skills">Skills</a></li>   
-                    <li><a href="#project">Project</a></li>    
-                    <li><a href="#gallery">Gallery</a></li>    
-                    <li><a href="#contact">Contact</a></li>    
+                <menu class="txtCenter">
+                    <li><b><a href="#home">Home</a></b></li>
+                    <li><b><a href="#about">About</a></b></li>
+                    <li><b><a href="#services">Services</a></b></li>
+                    <li><b><a href="#skills">Skills</a></b></li>
+                    <li><b><a href="#project">Project</a></b></li>
+                    <li><b><a href="#gallery">Gallery</a></b></li>
+                    <li><b><a href="#contact">Contact</a></b></li>
                 </menu>
             </nav>
         </div>
+        <div></div>
     </header>
 
     <main>
@@ -97,7 +124,8 @@
                     <h1>Hello !<br>I'm Ravindu..</h1>
                     <h4>Software Engineer - Web Developer - UI/UX Engineer</h4>
                 </hgroup>
-                <img width="300" src="assets/home.png " alt="Site owner">
+                <div><img width="300" src="assets/home.png " alt="Site owner"></div>
+
             </section>
             <section>
                 <div>
