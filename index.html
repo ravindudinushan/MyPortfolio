@@ -13,7 +13,7 @@
     <meta name="theme-color" content="red">
     <meta name="viewport" content="width=device-width initial-scale=1">
     <link rel="stylesheet" href="assets/necolas.github.io_normalize.css_8.0.1_normalize.css">
-    
+    <link rel="stylesheet" href="assets/fontawesome-free-6.4.2-web/fontawesome-free-6.4.2-web/css/all.css">
     <style>
         ul, li, ol {
             list-style: none;
@@ -35,12 +35,14 @@
             background-size: auto 100%;
         }
         body{
+            height: 800vh;
             margin-top: -22px;
-            color: #666666;
+            color: black;
             font-size: 15px;
             font-family: 'Poppins', sans-serif;
             line-height: 1.80857;
             margin-right: 0;
+            background: #EAEAEA;
         }
         a {
             color: #ffffff;
@@ -67,15 +69,20 @@
             left: 80px;
             bottom: 10px;
         }
-        header>:last-child{
+        .topBar{
+            width: 100%;
+            background: black;
+            height: 8px;
+            position: relative;
+            bottom: 19px;
+        }
+        .bottomBar{
             width: 100%;
             background: black;
             height: 5px;
             position: relative;
-            bottom: 19px;
-        }
-        main>section:first-child{
-            height: 100vh;
+            bottom: 450px;
+
         }
         hgroup>h1,h4{
             width: 80%;
@@ -94,7 +101,7 @@
             font-weight: inherit;
         }
         main>section:first-child{
-            background: #D9D9D9;
+            background: #EAEAEA;
         }
         main>section>section>div:last-child>img{
             position: relative;
@@ -126,9 +133,30 @@
             position: relative;
             left: 30px;
         }
+        body>main>section>section:nth-child(3)>div:nth-child(3) {
+            position: relative;
+            bottom: 410px;
+            left: 30px;
+        }
+        body>main>section>section:nth-child(3)>div:nth-child(3)>p{
+            position: relative;
+            left: 30px;
+            bottom: 45px;
+        }
+        body>main>section>section:nth-child(3)>div:nth-child(4){
+            position: relative;
+            right: 670px;
+            bottom: 290px;
+        }
+        span{
+            color: #0892fd;
+        }
+        .page{
+            height: 100vh;
+            background: #EAEAEA;
+        }
 
     </style>
-
 </head>
 <body>
     <header>
@@ -146,15 +174,15 @@
                 </menu>
             </nav>
         </div>
-        <div></div>
+        <div class="topBar"></div>
     </header>
 
     <main>
-        <section>
+        <section class="page">
             <dfn id="home"></dfn>
             <section>
                 <hgroup>
-                    <h1>Hello !<br>I'm Ravindu..</h1>
+                    <h1><span>Hello !</span><br>I'm Ravindu..</h1>
                     <h4>Software Engineer - Web Developer - UI/UX Engineer</h4>
                 </hgroup>
                 <div><img width="550px" height="500px" src="assets/home.png " alt="Site owner"></div>
@@ -169,19 +197,19 @@
                     </map>
                 </div>
                 <div>
-                    <img usemap="#mail map" width="30" src="assets/mail.png" alt="Mail">
+                    <img usemap="#mail map" width="20" src="assets/mail.png" alt="Mail">
                     <p>E Mail : ravindudinushan9966@gmail.com</p>
                     <map name="mail map">
                         <area shape="rect" coords="0,0,30,30" target="_self" href="mailto:ravindudinushan@gmail.com" alt="Mail">
                     </map>
                 </div>
                 <div>
-                    <img usemap="#fb map" width="40" src="assets/facebook.png" alt="facebook">
-                    <img usemap="#linkedin map" width="40" src="assets/linkedin.png" alt="Linkedin">
-                    <img usemap="#github map" width="50" src="assets/github.png" alt="Github">
-                    <img width="40" src="assets/whatsapp.png" alt="Whatsapp">
-                    <img usemap="#twitter map" width="45" src="assets/twitter.png" alt="Twitter">
-                    <img width="40" src="assets/telegram.png" alt="Telegram">
+                    <img usemap="#fb map" width="25" src="assets/facebook.png" alt="facebook">
+                    <img usemap="#linkedin map" width="25" src="assets/linkedin.png" alt="Linkedin">
+                    <img usemap="#github map" width="35" src="assets/github.png" alt="Github">
+                    <img width="25" src="assets/whatsapp.png" alt="Whatsapp">
+                    <img usemap="#twitter map" width="30" src="assets/twitter.png" alt="Twitter">
+                    <img width="25" src="assets/telegram.png" alt="Telegram">
 
                     <map name="fb map">
                         <area shape="rect" coords="0,0,40,40" target="_blank" href="https://web.facebook.com/profile.php?id=100010660606139" alt="Go To Facebook">
@@ -197,14 +225,15 @@
                     </map>
                 </div>
             </section>
+            <div class="bottomBar"></div>
         </section>
 
-        <section>
+        <section class="page">
             <dfn id="about"></dfn>
             <section>
                 <h1>About</h1>
             </section>
-            <img width="400" src="assets/my.png" alt="Developer Image">
+            <img width="350" src="assets/my.png" alt="Developer Image">
             <section>
             <div>
                 <p><b>Who am I ?</b></p>
@@ -227,9 +256,10 @@
                     </ul>
                 </div>
             </section>
+            <div class="bottomBar"></div>
         </section>
 
-        <section>
+        <section class="page">
             <dfn id="services"></dfn>
             <section>
                 <h1>My Services</h1>
@@ -255,7 +285,7 @@
             </section>
         </section>
 
-        <section>
+        <section class="page">
             <dfn id="skills"></dfn>
             <section>
                 <h1>My Skills</h1>
@@ -290,7 +320,7 @@
                 </section>
         </section>
 
-        <section>
+        <section class="page">
             <section><h1>My Cetificate</h1></section>
             <section>
                 <div>
@@ -314,7 +344,7 @@
             </section>
         </section>
 
-        <section>
+        <section class="page">
             <dfn id="project"></dfn>
             <section><h1>My Project</h1></section>
             <section>
@@ -327,7 +357,7 @@
             </section>
         </section>
 
-        <section>
+        <section class="page">
             <section><h1>My Assignments</h1></section>
             <section>
                 <div></div>
@@ -339,7 +369,7 @@
             </section>
         </section>
 
-        <section>
+        <section class="page">
             <dfn id="gallery"></dfn>
             <section><h1>My Gallery</h1></section>
             <section>
@@ -349,7 +379,7 @@
             </section>
         </section>
 
-        <section>
+        <section class="page">
             <dfn id="contact"></dfn>
             <section><h1>Contact Me</h1></section>
             <section>
