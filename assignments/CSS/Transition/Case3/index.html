@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Case3</title>
+    <meta name="viewport" content="width=device-width initial-scale=1">
+    <link rel="stylesheet" href="necolas.github.io_normalize.css_8.0.1_normalize.css">
+
+    <style>
+
+        body{
+            background-color: #566573;
+        }
+        section{
+            width: 98vw;
+            height: 97vh;
+            position: relative;
+        }
+        section>div{
+            height: 280px;
+            width: 280px;
+            background-image: url("Pink.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            margin: auto;
+        }
+        .div{
+            width: 100%;
+            height: 0;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            transition: height 0.5s;
+            background: rgba(189, 195, 199, 0.35);
+            background: linear-gradient(to bottom, rgba(44, 62, 80, 0.34), rgba(189, 195, 199, 0.31));
+        }
+        section>div:hover .div{
+            height: 100%;
+        }
+        div>img{
+            height: 20%;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+
+    </style>
+
+</head>
+
+<body>
+<section>
+    <div><div class="div"><img src="delete.png" alt=""></div></div>
+</section>
+
+</body>
+
+
+</html>
