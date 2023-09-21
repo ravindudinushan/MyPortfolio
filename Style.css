@@ -928,3 +928,139 @@ span{
         height: 35px;
     }
 }
+
+@media all and (min-width: 375px) and (max-width: 425px) {
+    .header{
+        height: 17%
+    }
+
+    .logo {
+        font-size: 2rem;
+        right: 14px;
+        position: relative;
+        bottom: 11px;
+        /*display: none;*/
+    }
+
+    .navbar a {
+        font-size: 1.2rem;
+        margin: 0;
+        position: relative;
+        top: 17px;
+        padding: 0.3rem;
+    }
+
+    .home-content h1 {
+        font-size: 4.6rem;
+    }
+
+    .social-media a {
+        width: 2rem;
+        height: 2.1rem;
+    }
+
+    .home-img>img {
+        position: relative;
+        width: 29vw;
+        top: 232px;
+        left: 18px;
+    }
+
+    .about-img img {
+        display: none;
+    }
+
+    .certificate .certificate-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .portfolio-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .assignment .assignment-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .social-media-footer a {
+        width: 3rem;
+        height: 3rem;
+    }
+    .footer-text p {
+        top: 10rem;
+        font-size: 1.4rem;
+        right: -10px;
+    }
+    .footer-iconTop a {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+@media all and (min-width: 425px) and (max-width: 768px) {
+    .header{
+        height: 17%
+    }
+
+    .logo {
+        font-size: 2rem;
+        right: 14px;
+        position: relative;
+        bottom: 11px;
+        /*display: none;*/
+    }
+
+    .navbar a {
+        font-size: 1.5rem;
+        margin: 0;
+        position: relative;
+        top: 17px;
+        padding: 0.3rem;
+    }
+
+    .home-content h1 {
+        font-size: 4.6rem;
+    }
+
+    .social-media a {
+        width: 2rem;
+        height: 2.1rem;
+    }
+
+    .home-img>img {
+        position: relative;
+        width: 30vw;
+        top: 210px;
+        left: 18px;
+    }
+
+    .about-img img {
+        display: none;
+    }
+
+    .certificate .certificate-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .portfolio-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .assignment .assignment-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .social-media-footer a {
+        width: 3rem;
+        height: 3rem;
+    }
+    .footer-text p {
+        top: 10rem;
+        font-size: 1.4rem;
+        right: -10px;
+    }
+    .footer-iconTop a {
+        width: 35px;
+        height: 35px;
+    }
+}
