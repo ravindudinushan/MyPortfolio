@@ -918,15 +918,18 @@ span{
         width: 2rem;
         height: 2.4rem;
     }
+
     .footer-text p {
         top: 10rem;
         font-size: 1rem;
         right: -22px;
     }
+
     .footer-iconTop a {
         width: 35px;
         height: 35px;
     }
+
 }
 
 @media all and (min-width: 375px) and (max-width: 425px) {
@@ -986,11 +989,13 @@ span{
         width: 3rem;
         height: 3rem;
     }
+
     .footer-text p {
         top: 10rem;
         font-size: 1.4rem;
         right: -10px;
     }
+
     .footer-iconTop a {
         width: 35px;
         height: 35px;
@@ -1054,13 +1059,16 @@ span{
         width: 3rem;
         height: 3rem;
     }
+
     .footer-text p {
         top: 10rem;
         font-size: 1.4rem;
         right: -10px;
     }
+
     .footer-iconTop a {
         width: 35px;
         height: 35px;
     }
+
 }
