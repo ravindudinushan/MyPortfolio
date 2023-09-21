@@ -860,3 +860,71 @@ span{
 /*    height: 300px;*/
 /*    background-color: #444141;*/
 /*}*/
+
+@media all and (min-width: 320px) and (max-width: 375px) {
+
+    .header{
+        height: 17%
+    }
+
+    .logo {
+        font-size: 1rem;
+        position: relative;
+        bottom: 11px;
+        /*display: none;*/
+    }
+
+    .navbar a {
+        font-size: 1rem;
+        margin: 0;
+        position: relative;
+        top: 17px;
+        padding: 0.3rem;
+    }
+
+    .home-content h1 {
+        font-size: 4.6rem;
+    }
+
+    .social-media a {
+        width: 2rem;
+        height: 2.1rem;
+    }
+
+    .home-img>img {
+        position: relative;
+        width: 28vw;
+        top: 243px;
+        left: 18px;
+    }
+
+    .about-img img {
+        display: none;
+    }
+
+    .certificate .certificate-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .portfolio-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .assignment .assignment-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .social-media-footer a {
+        width: 2rem;
+        height: 2.4rem;
+    }
+    .footer-text p {
+        top: 10rem;
+        font-size: 1rem;
+        right: -22px;
+    }
+    .footer-iconTop a {
+        width: 35px;
+        height: 35px;
+    }
+}
