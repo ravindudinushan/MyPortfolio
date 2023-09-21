@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Case2</title>
+    <meta name="viewport" content="width=device-width initial-scale=1">
+    <link rel="stylesheet" href="necolas.github.io_normalize.css_8.0.1_normalize.css">
+    <style>
+        main {
+            width: 500px;
+            height: 300px;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        main>section {
+            height: 100%;
+            width: 400%;
+            display: flex;
+            animation-name:animation;
+            animation-duration: 12s;
+            animation-delay: .5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            animation-direction: alternate;
+        }
+
+        section>section {
+            height: 100%;
+            width: 100%;
+        }
+
+        section>section:first-child {
+            background: url("imag.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        section>section:nth-child(2) {
+            background: url("img1.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        section>section:nth-child(3) {
+            background: url("img5.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        section>section:last-child {
+            background: url("img6.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+
+
+        @keyframes animation {
+            0%,20% {
+                transform: translate(0)
+            }
+            25%,45% {
+                transform: translate(-25%)
+            }
+            50%,70% {
+                transform: translate(-50%)
+            }
+            75%,100% {
+                transform: translate(-75%)
+            }
+        }
+
+    </style>
+</head>
+<body>
+<main>
+    <section>
+        <section></section>
+        <section></section>
+        <section></section>
+        <section></section>
+    </section>
+</main>
+</body>
+</html>
