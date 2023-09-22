@@ -213,6 +213,12 @@ span{
     font-size: 4.5rem;
 }
 
+.sub-heading{
+    text-align: center;
+    font-size: 3.5rem;
+    color: #FFFF00FF;
+}
+
 .about-content h2{
     text-align: left;
     line-height: 1.2;
