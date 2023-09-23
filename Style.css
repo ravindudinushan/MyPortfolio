@@ -198,6 +198,7 @@ span{
     flex-basis: 30%;
     height: 400px;
     max-height: 450px;
+    right: 5rem;
     background-color: var(--light-heading-color);
 }
 .about-desc{
@@ -228,7 +229,7 @@ span{
     left: calc(100% - 10px);
     transform: translate(-50%, -50%);
     z-index: 3;
-    background-color: var(--second-bg-color);
+    background-color: var(--bg-color);
     padding: 15px;
     border-radius: 5px;
 }
@@ -699,6 +700,15 @@ span{
     font-size: 2rem;
     color: var(--second-bg-color);
 }
+
+.btn-see-more{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 4rem;
+}
+
 /*Gallery Form --------------------------------------------*/
 
 .gallery h2{
@@ -804,78 +814,116 @@ span{
 
 /*footer design ----------------------------------------- */
 
-.footer{
+section.page-footer{
+    width: 100%;
+    padding: 70px 8% 50px;
+    background-color: var(--second-bg-color);
+    color: var(--text-color);
+}
+.page-footer .footer-contents{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 3fr 2fr 2fr;
+    grid-gap: 40px;
+}
+.footer-contents .footer-col{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 2rem 9%;
-    background: var(--second-bg-color);
-
+    flex-direction: column;
 }
-
-.footer-text p{
-    position: relative;
-    top: 5rem;
-    font-size: 1.6rem;
-    right: 300px;
-
+.footer-contents .footer-col .footer-col-title{
+    margin-bottom: 20px;
 }
-
-.footer-iconTop a{
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    padding: .8rem;
-    background: var(--main-color);
-    border-radius: .8rem;
-    transition: .5s ease;
+.footer-col .footer-col-title h3{
+    font-size: 24px;
+    color: var(--light-heading-color);
+    text-transform: capitalize;
 }
-
-.footer-iconTop a:hover{
-    box-shadow: 0 0 1rem var(--main-color);
-
+.footer-contents .footer-col .footer-col-desc{
+    display: flex;
+    flex-direction: column;
 }
-
-.footer-iconTop i{
-    font-size: 2rem;
-}
-.footer-iconTop p{
+.footer-col-1 .footer-col-desc p{
+    line-height: 1.4;
+    color: var(--light-heading-color);
+    margin-bottom: 10px;
     font-size: 1.3rem;
 }
-.footer-iconTop a i{
-    font-size: 4rem;
-
+.footer-col-1 .footer-col-desc span{
+    color: var(--light-heading-color);
+    margin-bottom: 17px;
+    display: inline-block;
+    font-size: 1.3rem;
 }
-
-.footer-logo-align{
-    position: relative;
-    text-align: center;
-    right: 300px;
+.footer-col-1 .footer-col-desc span:nth-of-type(1){
+    margin-top: 15px;
+    font-size: 1.3rem;
 }
-
-.social-media-footer a{
-    display: inline-flex;
+.footer-col-1 .footer-social-media{
+    display: flex;
+    margin-top: 20px;
+}
+.footer-col-1 .footer-social-media a{
+    text-decoration: none;
+    color: var(--light-heading-color);
+    margin-right: 10px;
+}
+.footer-col-1 .footer-social-media a i{
+    width: 35px;
+    height: 35px;
+    display: flex;
     justify-content: center;
     align-items: center;
-    width: 3rem;
-    height: 3rem;
-    background: transparent;
-    border: .1rem solid var(--main-color);
-    border-radius: 50%;
-    font-size: 2rem;
+    font-size: 16px;
+    background-color: var(--main-color);
+    color: var(--bg-color);
+    border: 1px solid transparent;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+.footer-col-1 .footer-social-media a i:hover{
+    background-color: transparent;
+    border: 1px solid var(--main-color);
     color: var(--main-color);
-    margin: 3rem 1.5rem 3rem 0;
-    transition: .5s ease;
-
 }
-
-.social-media-footer a:hover{
-    background: var(--main-color);
+.footer-col-2 .footer-col-desc a{
+    text-decoration: none;
+    font-size: 16px;
+    color: var(--light-heading-color);
+    letter-spacing: 1px;
+    margin-bottom: 17px;
+    transition: 0.3s;
+}
+.footer-col-2 .footer-col-desc a:hover{
+    color: var(--main-color);
+}
+.footer-col-3 .footer-col-desc p{
+    color: var(--text-color);
+    line-height: 1.4;
+    font-size: 1.3rem;
+}
+.footer-col-3 .footer-col-desc input{
+    width: 100%;
+    padding: 15px;
+    margin: 20px 0px 15px;
+    background-color: var(--light-heading-color);
     color: var(--second-bg-color);
-    box-shadow: 0 0 1rem var(--main-color);
-
+    border: none;
+    border-radius: 25px;
 }
+.copy-rights{
+    width: 100%;
+    padding: 30px 8%;
+    background-color: var(--bg-color);
+    border-top: 1px solid #333;
+}
+.copy-rights p{
+    color: var(--light-heading-color);
+    text-align: center;
+}
+.copy-rights p b{
+    color: var(--main-color);
+}
+
 
 /*.box{*/
 /*    width: 200px;*/
