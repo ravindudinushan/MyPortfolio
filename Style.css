@@ -314,7 +314,14 @@ span{
 .services-box i{
     font-size: 7rem;
     color: var(--main-color);
+    transition-property: all;
+    transition-duration: .5s;
+}
 
+.services-box i:hover{
+    transform: rotate(360deg);
+    transition-property: all;
+    transition-duration: .5s;
 }
 
 .services-box h3{
