@@ -38,7 +38,7 @@ html{
 body{
     background: var(--bg-color);
     color: var(--text-color);
-    background: url("assets/burn.gif");
+    /*background: url("assets/burn.gif");*/
 
 }
 
@@ -102,7 +102,7 @@ section{
     display: flex;
     justify-content: center;
     align-items: center;
-    /*background: url("assets/burn.gif");*/
+    background: url("assets/burn.gif");
     /*background-size: cover;*/
 }
 
@@ -288,6 +288,10 @@ span{
 
 }
 
+.service-background{
+    background: url("assets/burn.gif");
+}
+
 .services-container {
     display: flex;
     justify-content: center;
@@ -450,7 +454,7 @@ span{
 
 .certificate{
     padding-bottom:10rem;
-
+    background: url("assets/burn.gif");
 }
 
 .certificate h2{
