@@ -6,8 +6,154 @@
     <link rel="stylesheet" href="assests/necolas.github.io_normalize.css_8.0.1_normalize.css">
     <meta name="viewport" content="width=device-width initial-scale=1">
     <link rel="stylesheet" href="assests/bootstrap-5.3.2-dist/bootstrap-5.3.2-dist/css/bootstrap.min.css">
+    <script src="assests/bootstrap-5.3.2-dist/bootstrap-5.3.2-dist/js/bootstrap.min.js"></script>
 </head>
 <body>
+<header>
 
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" style="padding-top: 0;">
+        <div class="container-fluid" style="background-color: #6eff65; height: 70px;">
+            <a class="navbar-brand" href="#">POS</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav" style="background-color: #6eff65;">
+                <ul class="navbar-nav"
+                    style="font-family:sans-serif; font-weight:bold;margin: 10px;">
+                    <li class="nav-item" style="background-color: #6eff65; ">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="customer.html">Customers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="item.html">Items</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="order.html">Orders</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main style="margin-top: 20px; z-index: 10">
+    <div class="accordion" id="accordionExample">
+        <div class="accordion-item  bg-secondary-subtle rounded-bottom-3" style="">
+            <h2 class="accordion-header rounded-bottom-3 ">
+                <button aria-controls="collapseOne" aria-expanded="false" class="accordion-button rounded-bottom-3 px-5 bg-success-subtle text-black " data-bs-target="#collapseOne" data-bs-toggle="collapse" type="button">Add / Update Item</button>
+            </h2>
+            <div class="accordion-collapse collapse" data-bs-parent="#accordionExample" id="collapseOne">
+
+                <div class="container-fluid ">
+                    <div class="row w-100 justify-content-center mx-auto mt-4">
+                        <div class="col-10 col-sm-5  mb-3 mt-3 mx-lg-3">
+                            <label class="form-label" for="inputItemCode">Item Code:</label>
+                            <input class="form-control border-secondary-subtle border-3 rounded-5" id="inputItemCode" placeholder="" type="text">
+                        </div>
+                        <div class="col-10 col-sm-5  mb-3 mt-3 mx-lg-3">
+                            <label class="form-label" for="inputItemName">Item Name:</label>
+                            <input class="form-control border-secondary-subtle border-3 rounded-5" id="inputItemName" placeholder="" type="text">
+                        </div>
+                        <div class="col-10 col-sm-5  mb-3 mt-3 mx-lg-3">
+                            <label class="form-label" for="inputUnitPrice">Unit Price:</label>
+                            <input class="form-control border-secondary-subtle border-3 rounded-5" id="inputUnitPrice" placeholder="" type="text">
+                        </div>
+                        <div class="col-10 col-sm-5  mb-3 mt-3 mx-lg-3">
+                            <label class="form-label" for="inputQtyOnHand">Qty On Hand:</label>
+                            <input class="form-control border-secondary-subtle border-3 rounded-5" id="inputQtyOnHand" placeholder="" type="text">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container-fluid mt-4 w-100 mb-5 px-5" id="btnContainer" style="height: max-content">
+                    <div class="row w-100">
+                        <div class="col-6 col-md-3 text-center py-2">
+                            <button class="btn w-100 h-100 btn-success">Save</button>
+                        </div>
+                        <div class="col-6 col-md-3 text-center py-2">
+                            <button class="btn w-100 h-100 btn-primary">Update</button>
+                        </div>
+                        <div class="col-6 col-md-3 text-center py-2">
+                            <button class="btn w-100 h-100 btn-danger">Delete</button>
+                        </div>
+                        <div class="col-6 col-md-3 text-center py-2">
+                            <button class="btn w-100 h-100" style="background-color: grey; color: white">Clear</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="row justify-content-around" style="height: max-content; padding-top: 40px; margin-right: 0">
+        <div class="col-10 col-md-5 col-lg-5 p-0" style="background-color: azure">
+            <h4 class="text-center bg-success p-2 text-light">Search Item</h4>
+            <form>
+                <div class="mb-3 ms-3 me-3">
+                    <input class="form-control" id="itemId" placeholder="Input Item Code" type="text">
+                </div>
+                <button class="btn btn-primary ms-3 mb-3 ms-md-3 ms-lg-3" type="submit">Search</button>
+
+            </form>
+        </div>
+    </div>
+
+    <table class="table table-hover m-auto w-75 mt-5 mb-5 table-responsive table-bordered">
+        <thead>
+        <tr class="table-dark">
+            <th>Item Code</th>
+            <th>Name</th>
+            <th>Unit Price</th>
+            <th>Qty On Hand</th>
+        </tr>
+        </thead>
+        <tbody class="table-secondary">
+        <tr>
+            <td>Row 1, Cell 1</td>
+            <td>Row 1, Cell 2</td>
+            <td>Row 1, Cell 3</td>
+            <td>Row 1, Cell 4</td>
+        </tr>
+        <tr>
+            <td>Row 2, Cell 1</td>
+            <td>Row 2, Cell 2</td>
+            <td>Row 2, Cell 3</td>
+            <td>Row 1, Cell 4</td>
+        </tr>
+        <tr>
+            <td>Row 1, Cell 1</td>
+            <td>Row 1, Cell 2</td>
+            <td>Row 1, Cell 3</td>
+            <td>Row 1, Cell 4</td>
+        </tr>
+        <tr>
+            <td>Row 2, Cell 1</td>
+            <td>Row 2, Cell 2</td>
+            <td>Row 2, Cell 3</td>
+            <td>Row 1, Cell 4</td>
+        </tr>
+        <tr>
+            <td>Row 1, Cell 1</td>
+            <td>Row 1, Cell 2</td>
+            <td>Row 1, Cell 3</td>
+            <td>Row 1, Cell 4</td>
+        </tr>
+        <tr>
+            <td>Row 2, Cell 1</td>
+            <td>Row 2, Cell 2</td>
+            <td>Row 2, Cell 3</td>
+            <td>Row 1, Cell 4</td>
+        </tr>
+        </tbody>
+    </table>
+</main>
+
+</body>
+
+</html>
 </body>
 </html>
