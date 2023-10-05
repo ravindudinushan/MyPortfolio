@@ -532,6 +532,15 @@
     <p><cite>Designed and developed by Ravindu Dinushan</cite> <br>Copyright &copy; 2023 by <b>Ravindu Dinushan</b> | All Rights Reserved. </p>
 
 </div>
+<section id="loader"><div></div></section>
+<script src="assets/code.jquery.com_jquery-3.7.1.min.js"></script>
 
+<script>
+    $(window).on('load',function (){
+// $("#loader").css('display','none');
+        $("#loader").fadeOut(1000);
+        console.log("Window is fully loaded");
+    });
+</script>
 </body>
 </html>
