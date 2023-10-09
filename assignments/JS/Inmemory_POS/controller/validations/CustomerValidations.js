@@ -2,26 +2,26 @@
 const CUS_ID_REGEX = /^(C00-)[0-9]{3}$/;
 const CUS_NAME_REGEX = /^[A-Za-z ]{5,}$/;
 const CUS_ADDRESS_REGEX = /^[A-Za-z0-9 ]{8,}$/;
-const CUS_SALARY_REGEX = /^[0-9]{2,}([.][0-9]{2})?$/;
+const CUS_CONTACT_REGEX = /^[0-9]{2,}([.][0-9]{2})?$/;
 
 //add validations and text fields to the
 let c_vArray = new Array();
-c_vArray.push({field: $("#txtCustomerID"), regEx: CUS_ID_REGEX});
-c_vArray.push({field: $("#txtCustomerName"), regEx: CUS_NAME_REGEX});
-c_vArray.push({field: $("#txtCustomerAddress"), regEx: CUS_ADDRESS_REGEX});
-c_vArray.push({field: $("#txtCustomerSalary"), regEx: CUS_SALARY_REGEX});
+c_vArray.push({field: $("#inputCustId"), regEx: CUS_ID_REGEX});
+c_vArray.push({field: $("#inputCustName"), regEx: CUS_NAME_REGEX});
+c_vArray.push({field: $("#inputCustAddress"), regEx: CUS_ADDRESS_REGEX});
+c_vArray.push({field: $("#inputCustContact"), regEx: CUS_CONTACT_REGEX});
 
 function clearCustomerInputFields() {
-    $("#txtCustomerID,#txtCustomerName,#txtCustomerAddress,#txtCustomerSalary").val("");
-    $("#txtCustomerID,#txtCustomerName,#txtCustomerAddress,#txtCustomerSalary").css("border", "1px solid #ced4da");
-    $("#txtCustomerID").focus();
+    $("#inputCustId,#inputCustName,#inputCustAddress,#inputCustContact").val("");
+    $("#inputCustId,#inputCustName,#inputCustAddress,#inputCustContact").css("border", "1px solid #ced4da");
+    $("#inputCustId").focus();
     setBtn();
 }
 
 setBtn();
 
 //disable tab
-$("#txtCustomerID,#txtCustomerName,#txtCustomerAddress,#txtCustomerSalary").on("keydown keyup", function (e) {
+$("#inputCustId,#inputCustName,#inputCustAddress,#inputCustContact").on("keydown keyup", function (e) {
     //get the index number of data input fields indexNo
     let indexNo = c_vArray.indexOf(c_vArray.find((c) => c.field.attr("id") == e.target.id));
 
@@ -86,21 +86,21 @@ function checkAll() {
 }
 
 function setBtn() {
-    $("#btnCusDelete").prop("disabled", true);
+    $("#btnDelete").prop("disabled", true);
     $("#btnUpdate").prop("disabled", true);
 
     if (checkAll()) {
-        $("#btnCustomer").prop("disabled", false);
+        $("#btnSave").prop("disabled", false);
     } else {
-        $("#btnCustomer").prop("disabled", true);
+        $("#btnSave").prop("disabled", true);
     }
 
-    let id = $("#txtCustomerID").val();
+    let id = $("#inputCustId").val();
     if (searchCustomer(id) == undefined) {
-        $("#btnCusDelete").prop("disabled", true);
+        $("#btnDelete").prop("disabled", true);
         $("#btnUpdate").prop("disabled", true);
     } else {
-        $("#btnCusDelete").prop("disabled", false);
+        $("#btnDelete").prop("disabled", false);
         $("#btnUpdate").prop("disabled", false);
     }
 
