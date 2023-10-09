@@ -2,7 +2,7 @@
 getAllCustomers();
 
 //add customer event
-$("#btnCustomer").click(function () {
+$("#btnSave").click(function () {
     if (checkAll()){
         saveCustomer();
     }else{
@@ -12,7 +12,7 @@ $("#btnCustomer").click(function () {
 });
 
 //get all customer event
-$("#btnGetAll").click(function () {
+$("#btnSave").click(function () {
     getAllCustomers();
 });
 
@@ -23,19 +23,19 @@ function bindTrEvents() {
         let id = $(this).children().eq(0).text();
         let name = $(this).children().eq(1).text();
         let address = $(this).children().eq(2).text();
-        let salary = $(this).children().eq(3).text();
+        let contact = $(this).children().eq(3).text();
 
         //set the selected rows data to the input fields
-        $("#txtCustomerID").val(id);
-        $("#txtCustomerName").val(name);
-        $("#txtCustomerAddress").val(address);
-        $("#txtCustomerSalary").val(salary);
+        $("#inputCustId").val(id);
+        $("#inputCustName").val(name);
+        $("#inputCustAddress").val(address);
+        $("#inputCustContact").val(contact);
     })
 }
 
 //delete btn event
-$("#btnCusDelete").click(function () {
-    let id = $("#txtCustomerID").val();
+$("#btnDelete").click(function () {
+    let id = $("#inputCustId").val();
 
     let consent = confirm("Do you want to delete.?");
     if (consent) {
@@ -54,13 +54,13 @@ $("#btnCusDelete").click(function () {
 
 //update  btn event
 $("#btnUpdate").click(function () {
-    let id = $("#txtCustomerID").val();
+    let id = $("#inputCustId").val();
     updateCustomer(id);
     clearCustomerInputFields();
 });
 
 //clear btn event
-$("#btn-clear1").click(function () {
+$("#btnClear").click(function () {
     clearCustomerInputFields();
 });
 
@@ -68,14 +68,14 @@ $("#btn-clear1").click(function () {
 
 // CRUD operation Functions
 function saveCustomer() {
-    let customerID = $("#txtCustomerID").val();
+    let customerID = $("#inputCustId").val();
     //check customer is exists or not?
     if (searchCustomer(customerID.trim()) == undefined) {
 
         //if the customer is not available then add him to the array
-        let customerName = $("#txtCustomerName").val();
-        let customerAddress = $("#txtCustomerAddress").val();
-        let customerSalary = $("#txtCustomerSalary").val();
+        let customerName = $("#inputCustName").val();
+        let customerAddress = $("#inputCustAddress").val();
+        let customerContact = $("#inputCustContact").val();
 
         //by using this one we can create a new object using
         //the customer model with same properties
@@ -85,7 +85,7 @@ function saveCustomer() {
         newCustomer.id = customerID;
         newCustomer.name = customerName;
         newCustomer.address = customerAddress;
-        newCustomer.salary = customerSalary;
+        newCustomer.contact = customerContact;
 
         //add customer record to the customer array (DB)
         customerDB.push(newCustomer);
@@ -107,13 +107,13 @@ function getAllCustomers() {
         let id = customerDB[i].id;
         let name = customerDB[i].name;
         let address = customerDB[i].address;
-        let salary = customerDB[i].salary;
+        let contact = customerDB[i].contact;
 
         let row = `<tr>
                      <td>${id}</td>
                      <td>${name}</td>
                      <td>${address}</td>
-                     <td>${salary}</td>
+                     <td>${contact}</td>
                     </tr>`;
 
         // //and then append the row to tableBody
@@ -153,13 +153,13 @@ function updateCustomer(id) {
             let customer = searchCustomer(id);
             //if the customer available can we update.?
 
-            let customerName = $("#txtCustomerName").val();
-            let customerAddress = $("#txtCustomerAddress").val();
-            let customerSalary = $("#txtCustomerSalary").val();
+            let customerName = $("#inputCustName").val();
+            let customerAddress = $("#inputCustAddress").val();
+            let customerContact = $("#inputCustContact").val();
 
             customer.name = customerName;
             customer.address = customerAddress;
-            customer.salary = customerSalary;
+            customer.contact = customerContact;
 
             getAllCustomers();
         }
