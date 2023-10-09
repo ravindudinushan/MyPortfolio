@@ -605,6 +605,12 @@
 
     });
 
+    $("#btnSave").click(function () {
+        getAllCustomers();
+    });
+
+    getAllCustomers();
+
     function getAllCustomers(){
         //remove all the child elements of tbody before adding the table rows
         $("#tblCustomer").empty();
@@ -620,6 +626,8 @@
         }
         bindEvents();
     }
+
+    bindEvents();
 
     function bindEvents() {
         $('#tblCustomer>tr').click(function () {
