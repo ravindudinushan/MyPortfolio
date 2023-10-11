@@ -1,11 +1,11 @@
 var customerDB = [
-    {id: "C00-001", name: "Marks", address: "Galle", salary: 2000},
-    {id: "C00-002", name: "Jacob", address: "Thorntan", salary: 25000}
+    {id: "C00-001", name: "Ravindu", address: "Galle", salary: 30000},
+    {id: "C00-002", name: "Piyumika", address: "Colombo", salary: 20000}
 ];
 
 var itemDB = [
-    {code:"I00-001",description:"Chocolate",qtyOnHand: 50,unitPrice: 300.00},
-    {code:"I00-002",description:"Sunlight",qtyOnHand: 40,unitPrice: 250.00}
+    {code:"I00-001",description:"Lux",qtyOnHand: 100,unitPrice: 300.00},
+    {code:"I00-002",description:"Sunlight",qtyOnHand: 100,unitPrice: 200.00}
 ];
 
 var CartDB = [];
