@@ -76,7 +76,7 @@
     </div>
 </section>
 
-<section id="customer">
+<section id="customers">
     <main style="margin-top: 20px; z-index: 10">
         <div class="accordion" id="accordionExample">
             <div class="accordion-item  bg-secondary-subtle rounded-bottom-3" style="">
@@ -199,7 +199,7 @@
                                 <input class="form-control border-secondary-subtle border-3 rounded-5" id="inputItemCode" placeholder="" type="text">
                             </div>
                             <div class="col-10 col-sm-5  mb-3 mt-3 mx-lg-3">
-                                <label class="form-label" for="inputItemName">Item Name:</label>
+                                <label class="form-label" for="inputItemName">Description:</label>
                                 <input class="form-control border-secondary-subtle border-3 rounded-5" id="inputItemName" placeholder="" type="text">
                             </div>
                             <div class="col-10 col-sm-5  mb-3 mt-3 mx-lg-3">
@@ -216,16 +216,16 @@
                     <div class="container-fluid mt-4 w-100 mb-5 px-5" id="btnContainer" style="height: max-content">
                         <div class="row w-100">
                             <div class="col-6 col-md-3 text-center py-2">
-                                <button class="btn w-100 h-100 btn-success">Save</button>
+                                <button id="itemSave" class="btn w-100 h-100 btn-success">Save</button>
                             </div>
                             <div class="col-6 col-md-3 text-center py-2">
-                                <button class="btn w-100 h-100 btn-primary">Update</button>
+                                <button id="itemUpdate" class="btn w-100 h-100 btn-primary">Update</button>
                             </div>
                             <div class="col-6 col-md-3 text-center py-2">
-                                <button class="btn w-100 h-100 btn-danger">Delete</button>
+                                <button id="itemDelete" class="btn w-100 h-100 btn-danger">Delete</button>
                             </div>
                             <div class="col-6 col-md-3 text-center py-2">
-                                <button class="btn w-100 h-100" style="background-color: grey; color: white">Clear</button>
+                                <button id="itemClear" class="btn w-100 h-100" style="background-color: grey; color: white">Clear</button>
                             </div>
                         </div>
                     </div>
@@ -234,47 +234,34 @@
             </div>
         </div>
 
-        <div class="row justify-content-around" style="height: max-content; padding-top: 40px; margin-right: 0">
-            <div class="col-10 col-md-5 col-lg-5 p-0" style="background-color: azure">
-                <h4 class="text-center bg-success p-2 text-light">Search Item</h4>
-                <form>
-                    <div class="mb-3 ms-3 me-3">
-                        <input class="form-control" id="itemId" placeholder="Input Item Code" type="text">
-                    </div>
-                    <button class="btn btn-primary ms-3 mb-3 ms-md-3 ms-lg-3" type="submit">Search</button>
-
-                </form>
-            </div>
-        </div>
-
         <table class="table table-hover m-auto w-75 mt-5 mb-5 table-responsive table-bordered">
             <thead>
             <tr class="table-dark">
                 <th>Item Code</th>
-                <th>Name</th>
+                <th>Description</th>
                 <th>Unit Price</th>
                 <th>Qty On Hand</th>
             </tr>
             </thead>
-            <tbody class="table-secondary">
-            <tr>
-                <td>I001</td>
-                <td>Soup</td>
-                <td>200.00</td>
-                <td>100</td>
-            </tr>
-            <tr>
-                <td>I002</td>
-                <td>Keeri Samba</td>
-                <td>100.00</td>
-                <td>1000</td>
-            </tr>
-            <tr>
-                <td>I003</td>
-                <td>sugar</td>
-                <td>250.00</td>
-                <td>1000</td>
-            </tr>
+            <tbody class="table-secondary" id="tblItem">
+<!--            <tr>-->
+<!--                <td>I001</td>-->
+<!--                <td>Soup</td>-->
+<!--                <td>200.00</td>-->
+<!--                <td>100</td>-->
+<!--            </tr>-->
+<!--            <tr>-->
+<!--                <td>I002</td>-->
+<!--                <td>Keeri Samba</td>-->
+<!--                <td>100.00</td>-->
+<!--                <td>1000</td>-->
+<!--            </tr>-->
+<!--            <tr>-->
+<!--                <td>I003</td>-->
+<!--                <td>sugar</td>-->
+<!--                <td>250.00</td>-->
+<!--                <td>1000</td>-->
+<!--            </tr>-->
             </tbody>
         </table>
     </main>
@@ -465,10 +452,10 @@
     </div>
 </section>
 
-<script src="assests/bootstrap-5.3.2-dist/bootstrap-5.3.2-dist/js/code.jquery.com_jquery-3.7.1.min.js"></script>
+<script src="assets/bootstrap-5.3.2-dist/bootstrap-5.3.2-dist/js/code.jquery.com_jquery-3.7.1.min.js"></script>
 
 <script>
-    var customer = document.querySelector("#customer");
+    var customer = document.querySelector("#customers");
     customer.style.display = 'none';
 
     var item = document.querySelector("#item");
@@ -646,7 +633,7 @@
 
 <script src="assets/bootstrap-5.3.2-dist/bootstrap-5.3.2-dist/js/code.jquery.com_jquery-3.7.1.min.js"></script>
 <script src="assets/bootstrap-5.3.2-dist/bootstrap-5.3.2-dist/js/bootstrap.min.js"></script>
-<script src="controller/DashboardController.js"></script>
+<!--<script src="controller/DashboardController.js"></script>-->
 <script src="db/db.js"></script>
 <script src="models/Customer.js"></script>
 <script src="models/Item.js"></script>

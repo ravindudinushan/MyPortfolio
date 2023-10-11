@@ -12,9 +12,9 @@ $("#btnSave").click(function () {
 });
 
 //get all customer event
-$("#btnSave").click(function () {
-    getAllCustomers();
-});
+// $("#btnSave").click(function () {
+//     getAllCustomers();
+// });
 
 //bind tr events for getting back data of the rows to text fields
 function bindTrEvents() {
