@@ -3,7 +3,6 @@ initiateUI();
 function initiateUI() {
     clearAll();
     $("#home-page").css('display', 'block');
-    // $("header").css('display', 'block');
     setTheLastView();
 }
 
