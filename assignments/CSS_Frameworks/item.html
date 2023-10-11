@@ -11,27 +11,36 @@
 <body>
 <header>
 
-    <nav class="navbar navbar-expand-lg bg-body-tertiary" style="padding-top: 0;">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid" style="background-color: #6eff65; height: 70px;">
-            <a class="navbar-brand" href="#">POS</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <div id="logo-div" class="d-flex">
+                <h1 class="navbar-brand me-5 ms-2 fs-4">POS System</h1>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav" style="background-color: #6eff65;">
-                <ul class="navbar-nav"
-                    style="font-family:sans-serif; font-weight:bold;margin: 10px;">
-                    <li class="nav-item" style="background-color: #6eff65; ">
-                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+            <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+                <ul class="navbar-nav gap-2">
+                    <li id="home-nav" class="nav-item">
+                        <!--                            <a class="nav-link active fw-medium text-body-secondary" aria-current="page" href="#"></i>Home</a>-->
+                        <a class="nav-link fw-medium" href="index.html" style="font-size: 15px">Home</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="customer.html">Customers</a>
+                    <li id="customer-nav" class="nav-item">
+                        <a class=" nav-link fw-medium" href="customer.html" style="font-size: 15px">Customers</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="item.html">Items</a>
+                    <li id="item-nav" class="nav-item">
+                        <a class="nav-link fw-medium" href="item.html" style="font-size: 15px">Items</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="order.html">Orders</a>
+                    <li id="order-nav" class="nav-item">
+                        <a class="nav-link fw-medium" href="order.html" style="font-size: 15px">Place Orders</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav gap-2">
+                    <li id="sign-up-nav" class="nav-item">
+                        <a class="nav-link" href="#"><i class="fs-5 fa-solid fa-user-plus"></i></a>
+                    </li>
+                    <li id="log-in-nav" class="nav-item">
+                        <a class="nav-link" href="#"><i class="fs-5 fa-solid fa-arrow-right-from-bracket fa-rotate-180"></i></a>
                     </li>
                 </ul>
             </div>
@@ -39,100 +48,78 @@
     </nav>
 </header>
 
-<main style="margin-top: 20px; z-index: 10">
-    <div class="accordion" id="accordionExample">
-        <div class="accordion-item  bg-secondary-subtle rounded-bottom-3" style="">
-            <h2 class="accordion-header rounded-bottom-3 ">
-                <button aria-controls="collapseOne" aria-expanded="false" class="accordion-button rounded-bottom-3 px-5 bg-success-subtle text-black " data-bs-target="#collapseOne" data-bs-toggle="collapse" type="button">Add / Update Item</button>
-            </h2>
-            <div class="accordion-collapse collapse" data-bs-parent="#accordionExample" id="collapseOne">
+<section id="item-page">
+    <section id="item-title" class=" d-flex mt-5 mb-4 justify-content-center">
+    </section>
+    <section id="item-content" class="container-fluid py-4 rounded-4">
+        <section class="d-flex justify-content-around flex-wrap-reverse">
+            <section id="item-left-content" class="col-12 col-sm-8 my-2">
+                <section id="item-search" class="mb-5">
+                    <form class="row gx-3 gy-2 align-items-center">
+                        <div class="col-sm-3">
+                            <label class="visually-hidden" for="cmbItemSearch">Preference</label>
+                            <select class="form-select" id="cmbItemSearch">
+                                <option value="Code">Code</option>
+                                <option value="Name">Name</option>
+                            </select>
+                        </div>
+                        <div class="w-50 col-sm-3">
+                            <label class="visually-hidden" for="txtItemSearch">Item</label>
+                            <input type="text" class="form-control" id="txtItemSearch" placeholder="Search item">
+                        </div>
+                        <div class="col-auto">
+                            <button id="btnItemSearch" type="button" class="btn btn-outline-primary">Search</button>
+                        </div>
+                        <div class="col-auto">
+                            <button id="btnItemClear" type="button" class="btn btn-outline-warning">Clear</button>
+                        </div>
+                    </form>
+                </section>
 
-                <div class="container-fluid ">
-                    <div class="row w-100 justify-content-center mx-auto mt-4">
-                        <div class="col-10 col-sm-5  mb-3 mt-3 mx-lg-3">
-                            <label class="form-label" for="inputItemCode">Item Code:</label>
-                            <input class="form-control border-secondary-subtle border-3 rounded-5" id="inputItemCode" placeholder="" type="text">
-                        </div>
-                        <div class="col-10 col-sm-5  mb-3 mt-3 mx-lg-3">
-                            <label class="form-label" for="inputItemName">Item Name:</label>
-                            <input class="form-control border-secondary-subtle border-3 rounded-5" id="inputItemName" placeholder="" type="text">
-                        </div>
-                        <div class="col-10 col-sm-5  mb-3 mt-3 mx-lg-3">
-                            <label class="form-label" for="inputUnitPrice">Unit Price:</label>
-                            <input class="form-control border-secondary-subtle border-3 rounded-5" id="inputUnitPrice" placeholder="" type="text">
-                        </div>
-                        <div class="col-10 col-sm-5  mb-3 mt-3 mx-lg-3">
-                            <label class="form-label" for="inputQtyOnHand">Qty On Hand:</label>
-                            <input class="form-control border-secondary-subtle border-3 rounded-5" id="inputQtyOnHand" placeholder="" type="text">
-                        </div>
+                <!--                    table-->
+                <section id="item-table" class="p-2 rounded-4 bg-light">
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th scope="col" class="bg-success text-white">Code</th>
+                            <th scope="col" class="bg-success text-white">Name</th>
+                            <th scope="col" class="bg-success text-white">Quantity</th>
+                            <th scope="col" class="bg-success text-white">Price</th>
+                        </tr>
+                        </thead>
+                        <tbody id="tbody-item" class="table-group-divider"></tbody>
+                    </table>
+                </section>
+
+            </section>
+            <section id="item-right-content" class="d-flex col-8 col-sm-4 col-md-3 justify-content-end rounded-4">
+                <section class="col-8 p-2 bg-light rounded-4 w-100">
+                    <div class="form-floating mb-3">
+                        <input type="email" class="form-control" id="txtItemCode" placeholder="name@example.com">
+                        <label for="txtItemCode">Item Code</label>
                     </div>
-                </div>
-
-                <div class="container-fluid mt-4 w-100 mb-5 px-5" id="btnContainer" style="height: max-content">
-                    <div class="row w-100">
-                        <div class="col-6 col-md-3 text-center py-2">
-                            <button class="btn w-100 h-100 btn-success">Save</button>
-                        </div>
-                        <div class="col-6 col-md-3 text-center py-2">
-                            <button class="btn w-100 h-100 btn-primary">Update</button>
-                        </div>
-                        <div class="col-6 col-md-3 text-center py-2">
-                            <button class="btn w-100 h-100 btn-danger">Delete</button>
-                        </div>
-                        <div class="col-6 col-md-3 text-center py-2">
-                            <button class="btn w-100 h-100" style="background-color: grey; color: white">Clear</button>
-                        </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="txtItemName" placeholder="name@example.com">
+                        <label for="txtItemName">Item Name</label>
                     </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-    <div class="row justify-content-around" style="height: max-content; padding-top: 40px; margin-right: 0">
-        <div class="col-10 col-md-5 col-lg-5 p-0" style="background-color: azure">
-            <h4 class="text-center bg-success p-2 text-light">Search Item</h4>
-            <form>
-                <div class="mb-3 ms-3 me-3">
-                    <input class="form-control" id="itemId" placeholder="Input Item Code" type="text">
-                </div>
-                <button class="btn btn-primary ms-3 mb-3 ms-md-3 ms-lg-3" type="submit">Search</button>
-
-            </form>
-        </div>
-    </div>
-
-    <table class="table table-hover m-auto w-75 mt-5 mb-5 table-responsive table-bordered">
-        <thead>
-        <tr class="table-dark">
-            <th>Item Code</th>
-            <th>Name</th>
-            <th>Unit Price</th>
-            <th>Qty On Hand</th>
-        </tr>
-        </thead>
-        <tbody class="table-secondary">
-        <tr>
-            <td>I001</td>
-            <td>Soup</td>
-            <td>200.00</td>
-            <td>100</td>
-        </tr>
-        <tr>
-            <td>I002</td>
-            <td>Keeri Samba</td>
-            <td>100.00</td>
-            <td>1000</td>
-        </tr>
-        <tr>
-            <td>I003</td>
-            <td>sugar</td>
-            <td>250.00</td>
-            <td>1000</td>
-        </tr>
-        </tbody>
-    </table>
-</main>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="txtItemQtyOnHand" placeholder="name@example.com">
+                        <label for="txtItemQtyOnHand">Item Quantity</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="txtItemPrice" placeholder="name@example.com">
+                        <label for="txtItemPrice">Price</label>
+                    </div>
+                    <section class="d-flex flex-wrap justify-content-center gap-2">
+                        <button id="btnItemSave" type="button" class="btn btn-outline-success">Save</button>
+                        <button id="btnItemUpdate" type="button" class="btn btn-outline-primary">update</button>
+                        <button id="btnItemDelete" type="button" class="btn btn-outline-danger">Delete</button>
+                    </section>
+                </section>
+            </section>
+        </section>
+    </section>
+</section>
 
 </body>
 

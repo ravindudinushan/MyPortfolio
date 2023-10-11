@@ -16,27 +16,36 @@
 <body>
 <header>
 
-    <nav class="navbar navbar-expand-lg bg-body-tertiary" style="padding-top: 0;">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid" style="background-color: #6eff65; height: 70px;">
-            <a class="navbar-brand" href="#">POS</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <div id="logo-div" class="d-flex">
+                <h1 class="navbar-brand me-5 ms-2 fs-4">POS System</h1>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav" style="background-color: #6eff65;">
-                <ul class="navbar-nav"
-                    style="font-family:sans-serif; font-weight:bold;margin: 10px;">
-                    <li class="nav-item" style="background-color: #6eff65; ">
-                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+            <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+                <ul class="navbar-nav gap-2">
+                    <li id="home-nav" class="nav-item">
+                        <!--                            <a class="nav-link active fw-medium text-body-secondary" aria-current="page" href="#"></i>Home</a>-->
+                        <a class="nav-link fw-medium" href="index.html" style="font-size: 15px">Home</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="customer.html">Customers</a>
+                    <li id="customer-nav" class="nav-item">
+                        <a class=" nav-link fw-medium" href="customer.html" style="font-size: 15px">Customers</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="item.html">Items</a>
+                    <li id="item-nav" class="nav-item">
+                        <a class="nav-link fw-medium" href="item.html" style="font-size: 15px">Items</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="order.html">Orders</a>
+                    <li id="order-nav" class="nav-item">
+                        <a class="nav-link fw-medium" href="order.html" style="font-size: 15px">Place Orders</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav gap-2">
+                    <li id="sign-up-nav" class="nav-item">
+                        <a class="nav-link" href="#"><i class="fs-5 fa-solid fa-user-plus"></i></a>
+                    </li>
+                    <li id="log-in-nav" class="nav-item">
+                        <a class="nav-link" href="#"><i class="fs-5 fa-solid fa-arrow-right-from-bracket fa-rotate-180"></i></a>
                     </li>
                 </ul>
             </div>
@@ -47,186 +56,142 @@
 
 <!-- INvoice Details -->
 
-<div class="container text-center" style="margin-top: 30px; background-color: #f5ffe6;">
-    <div class="row">
-        <div class="col" style="height: 330px; margin-right: 30px;">
-            <h3 class="bg-success" style="color: white; width: 400px;">Invoice Details</h3>
-
-            <div class="container text-center" style="margin-top: 30px;">
-                <div class="row">
-                    <div class="col">
-                        <label class="form-label" for="inputOID">Order ID:</label>
-                        <input type="text" class="form-control" id="inputOID" placeholder="">
-                    </div>
-                    <div class="col">
-                        <label class="form-label" for="date">Date:</label>
-                        <input type="date" class="form-control" id="date" placeholder="">
-                    </div>
-                </div>
-            </div>
-            <div class="container text-center">
-                <div class="row">
-                    <div class="col">
-                        Cus ID :
-                        <select class="form-select" aria-label="Default select example">
-                            <option selected></option>
-                            <option value="1">C001</option>
-                            <option value="2">C002</option>
-                            <option value="3">C003</option>
-                        </select>
-                    </div>
-                    <div class="col">
-                        <label class="form-label" for="custName">Customer Name:</label>
-                        <input type="text" class="form-control" id="custName" placeholder="">
-                    </div>
-
-                    <div class="container text-center">
-                        <div class="row">
-                            <div class="col">
-                                <label class="form-label" for="salary">Salary:</label>
-                                <input type="text" class="form-control" id="salary" placeholder="">
+<section id="order-page">
+    <section id="title" class=" d-flex mt-5 mb-4 justify-content-center">
+    </section>
+    <section id="content" class="container-fluid py-4 rounded-4">
+        <section class="container-fluid">
+            <section id="place-order-content" class="row d-flex justify-content-between flex-wrap">
+                <section id="order-details" class="col-12 col-sm-8">
+                    <section id="invoice-details" class=" col-12 p-2 rounded-4">
+                        <div class="rounded-3 w-100 bg-success">
+                            <h5 class="fw-normal ps-3 mb-0 py-1 text-white">Invoice Details</h5>
+                        </div>
+                        <div id="customer-detail-cover" class="row">
+                            <div id="order-id" class="d-flex flex-wrap gap-5">
+                                <div class="mt-1 col-5 col-md-3">
+                                    <label for="txtOrderId" class="form-label m-0">Order ID :</label>
+                                    <input type="text" class="form-control" id="txtOrderId" placeholder="Ex: OD-0001">
+                                </div>
+                                <div class="mt-1 col-5 col-md-3">
+                                    <label for="txtOrderDate" class="form-label m-0">Order Date :</label>
+                                    <input type="text" class="form-control" id="txtOrderDate" disabled="true">
+                                </div>
                             </div>
-                            <div class="col">
-                                <label class="form-label" for="address">Address:</label>
-                                <input type="text" class="form-control" id="address" placeholder="">
+                            <!--                order-id ////////////////////////-->
+                            <div id="customer-id" class="d-flex flex-wrap align-items-center gap-3">
+                                <div class="mt-1 col-5 col-md-3">
+                                    <label for="cmbCustomerIds" class="form-label m-0">Customer ID :</label>
+                                    <select id="cmbCustomerIds" class="form-select" aria-label="Default select example">
+
+                                    </select>
+                                </div>
+                                <div class="mt-1 col-5 col-md-4">
+                                    <label for="lblCustomerName" class="form-label m-0">Customer Name :</label>
+                                    <label id="lblCustomerName"class="form-label m-0 fw-semibold"></label>
+                                </div>
+                                <div class="mt-1 col-5 col-md-4">
+                                    <label for="lblCustomerAddress" class="form-label m-0">Customer Address :</label>
+                                    <label id="lblCustomerAddress" class="form-label m-0 fw-semibold"></label>
+                                </div>
                             </div>
+                            <!--                customer-id //////////////////////-->
+                        </div>
+                        <!--              customer-detail-cover/////////////////////-->
+                    </section>
+                    <!--           invoice-details ////////////////////////////-->
+                    <section id="item-details" class="mt-4 p-2 rounded-4">
+                        <div class="rounded-3 w-100 bg-success">
+                            <h5 class="fw-normal ps-3 mb-0 py-1 text-white">Item Details</h5>
+                        </div>
+                        <div id="item-details-cover">
+                            <div id="item-id" class="d-flex flex-wrap gap-5 align-items-center">
+                                <div class="mt-1 col-4 col-md-3">
+                                    <label for="cmbItemCodes" class="form-label m-0">Item Code :</label>
+                                    <select id="cmbItemCodes" class="form-select" aria-label="Default select example">
+
+                                    </select>
+                                </div>
+                                <div class="mt-1 col-5 col-md-3">
+                                    <label for="txtOrderQty" class="form-label m-0">Order qty :</label>
+                                    <input type="number" class="form-control" id="txtOrderQty" >
+                                </div>
+                                <div class="col-auto">
+                                    <button id="btnAddToCart" type="button" class="btn btn-warning">Add to Cart</button>
+                                </div>
+                            </div>
+                            <!--                item-id /////////////////-->
+                            <div id="item-name" class="d-flex flex-wrap align-items-center gap-3">
+                                <div class="mt-1 col-4 col-md-4">
+                                    <label for="lblItemName" class="form-label m-0">Item Name :</label>
+                                    <label id="lblItemName" class="form-label m-0 fw-semibold"></label>
+                                </div>
+                                <div class="mt-1 col-3 col-md-3">
+                                    <label for="lblItemUnitPrice" class="form-label m-0">Unit Price :</label>
+                                    <label id="lblItemUnitPrice" class="form-label m-0 fw-semibold"></label>
+                                </div>
+                                <div class="mt-1 col-3 col-md-3">
+                                    <label for="lblQtyOnHand" class="form-label m-0">Qty On Hand :</label>
+                                    <label id="lblQtyOnHand" class="form-label m-0 fw-semibold"></label>
+                                </div>
+                            </div>
+                            <!--                item-name //////////////////-->
+                        </div>
+                        <!--              item-details-cover //////////////-->
+                    </section>
+                    <!--            item-details ////////////////////-->
+                </section>
+                <!--           order-details ////////////////////////////-->
+                <section id="amount-details" class="col-4 p-2 rounded-4">
+                    <div id="sub-total" class="d-flex justify-content-center align-items-center gap-2 mb-2 mt-4">
+                        <label for="lblSubTotal" class="form-label m-0 text-danger fs-4 fw-semibold">Sub Total :</label>
+                        <label id="lblSubTotal" class="form-label m-0 fw-semibold text-danger fs-4"></label>
+                    </div>
+                    <div id="total" class="d-flex justify-content-center gap-2">
+                        <label for="lblTotal" class="form-label m-0 fs-5">Total :</label>
+                        <label id="lblTotal" class="form-label m-0 fs-5"></label>
+                    </div>
+                    <div id="enter-total-div" class="row d-flex justify-content-center gap-1 my-2">
+                        <div class="mt-1 col-6 col-md-5">
+                            <label for="txtCash" class="form-label m-0">Cash :</label>
+                            <input type="number" class="form-control" id="txtCash" >
+                        </div>
+                        <div class="mt-1 col-6 col-md-6">
+                            <label for="txtDiscount" class="form-label m-0">Discount :</label>
+                            <input type="number" class="form-control" id="txtDiscount" >
                         </div>
                     </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
-        <!-- item Select -->
-
-        <div class="col" style="height: 330px; margin-right: 30px;">
-            <h3 class="bg-success" style="color: white;width: 400px;">Item Select</h3>
-            <!-- code here -->
-            <div class="container text-center" style="margin-top: 30px;">
-                <div class="row">
-                    <div class="col">
-                        Item Code :
-                        <select class="form-select" aria-label="Default select example">
-                            <option selected></option>
-                            <option value="1">I001</option>
-                            <option value="2">I002</option>
-                            <option value="3">I003</option>
-                        </select>
+                    <div id="balance" class="d-flex justify-content-start gap-2 my-3 ms-3">
+                        <label for="lblBalance" class="form-label m-0 fs-6">Balance :</label>
+                        <label id="lblBalance" class="form-label m-0 fs-6"></label>
                     </div>
-                    <div class="col">
-                        Item Name :
-                        <select class="form-select" aria-label="Default select example">
-                            <option selected></option>
-                            <option value="1">Soap</option>
-                            <option value="2">Keeri Samba</option>
-                            <option value="3">Sugar</option>
-                        </select>
+                    <div class="col-auto d-flex justify-content-center mt-5">
+                        <button type="submit" class="btn btn-success">Place Order</button>
                     </div>
-                </div>
-            </div>
-            <div class="container text-center">
-                <div class="row">
-                    <div class="col">
-                        <label class="form-label" for="price">Price:</label>
-                        <input type="text" class="form-control" id="price" placeholder="">
+                    <!--            enter-total-div /////////////////////-->
+                </section>
+                <!--          amount-details ///////////////////-->
+            </section>
+            <!--          place-order-content ///////////////////////-->
+        </section>
+        <!--      table///////////////////////////////////////////////////////////////-->
+        <section id="order-table" class="pt-5 rounded-4 bg-light">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col" class="bg-success text-white">Item Code</th>
+                    <th scope="col" class="bg-success text-white">Item Name</th>
+                    <th scope="col" class="bg-success text-white">Unit Price</th>
+                    <th scope="col" class="bg-success text-white">Quantity</th>
+                    <th scope="col" class="bg-success text-white">Total</th>
+                </tr>
+                </thead>
+                <tbody id="tbody-orderCart" class="table-group-divider">
+                </tbody>
+            </table>
+        </section>
 
-                    </div>
-                    <div class="col">
-                        <label class="form-label" for="qty">QtyOnHand:</label>
-                        <input type="text" class="form-control" id="qty" placeholder="">
-
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="container text-center">
-                <div class="row">
-                    <div class="col">
-                        <label class="form-label" for="Oqty">OrderQty:</label>
-                        <input type="text" class="form-control" id="Oqty" placeholder="">
-
-                    </div>
-                    <div class="col">
-                        <button type="button" class="btn btn-danger" style="margin-top: 70px;">Add Item</button>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-
-        <!-- total part -->
-
-        <div class="col" style="height: 330px; height: 340px; width: auto; background-color: #e1ffbf;">
-            <!-- code here -->
-
-            <div class="container text-center">
-                <div class="row">
-                    <div class="col" style="color: blue;font-size: 30px;">
-                        Total
-                        <label for="exampleFormControlInput1" class="form-label"
-                               style="font-size: 40px;color: red;">1000.00</label>
-
-                    </div>
-                </div>
-            </div>
-
-            <div class="container text-center">
-                <div class="row">
-                    <div class="col">
-                        <label class="form-label" for="cash">Cash:</label>
-                        <input type="text" class="form-control" id="cash" placeholder="">
-                    </div>
-                </div>
-            </div>
-
-            <div class="container text-center">
-                <div class="row">
-                    <div class="col">
-                        Balance :
-                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
-                    </div>
-                </div>
-            </div>
-
-            <div class="container text-center">
-                <div class="row">
-                    <div class="col">
-                        <button type="button" class="btn btn-primary" style="margin-top: 30px;">Purchase</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="row mt-1 mt-md-2 mt-lg-5 justify-content-around">
-        <div class="col-10">
-
-            <div class="customeTableDiv">
-                <table class="table bg-light table-bordered w-100 h-100 table-hover">
-                    <thead class="bg-success text-light text-center">
-                    <tr>
-                        <th>Item Code</th>
-                        <th>Item Name</th>
-                        <th>Price</th>
-                        <th>Quantity</th>
-                        <th>Total</th>
-                    </tr>
-                    </thead>
-                    <tbody id="customerTable">
-                    <tr>
-                        <td>I002</td>
-                        <td>Soap</td>
-                        <td>200.00</td>
-                        <td>2</td>
-                        <td>400.00</td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
-
+    </section>
+</section>
 </body>
 </html>

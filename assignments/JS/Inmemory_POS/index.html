@@ -2,650 +2,487 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>POS</title>
-    <meta name="viewport" content="width=device-width initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POS System</title>
     <link rel="stylesheet" href="assets/necolas.github.io_normalize.css_8.0.1_normalize.css">
     <link rel="stylesheet" href="assets/bootstrap-5.3.2-dist/bootstrap-5.3.2-dist/css/bootstrap.min.css">
-    <style>
-        body{
-            margin-right: 12px;
-        }
-    </style>
 </head>
 <body>
-
-<section id="header">
     <header>
-
-        <nav class="navbar navbar-expand-lg bg-body-tertiary" style="padding-top: 0;">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid" style="background-color: #6eff65; height: 70px;">
-                <a class="navbar-brand" href="#">POS</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <div id="logo-div" class="d-flex">
+                    <h1 class="navbar-brand me-5 ms-2 fs-4">POS System</h1>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarNav" style="background-color: #6eff65;">
-                    <ul class="navbar-nav"
-                        style="font-family:sans-serif; font-weight:bold;margin: 10px;">
-                        <li class="nav-item" style="background-color: #6eff65; ">
-                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+                    <ul class="navbar-nav gap-2">
+                        <li id="home-nav" class="nav-item">
+<!--                            <a class="nav-link active fw-medium text-body-secondary" aria-current="page" href="#"></i>Home</a>-->
+                            <a class="nav-link fw-medium" href="#home-page" style="font-size: 15px">Home</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" id="customerClick">Customers</a>
+                        <li id="customer-nav" class="nav-item">
+                            <a class=" nav-link fw-medium" href="#customer-page" style="font-size: 15px">Customers</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" id="itemClick">Items</a>
+                        <li id="item-nav" class="nav-item">
+                            <a class="nav-link fw-medium" href="#item-page" style="font-size: 15px">Items</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" id="orderClick">Orders</a>
+                        <li id="order-nav" class="nav-item">
+                            <a class="nav-link fw-medium" href="#order-page" style="font-size: 15px">Place Orders</a>
                         </li>
                     </ul>
                     <ul class="navbar-nav gap-2">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Sign up</a>
+                        <li id="sign-up-nav" class="nav-item">
+                            <a class="nav-link" href="#"><i class="fs-5 fa-solid fa-user-plus"></i></a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Log out</a>
+                        <li id="log-in-nav" class="nav-item">
+                            <a class="nav-link" href="#"><i class="fs-5 fa-solid fa-arrow-right-from-bracket fa-rotate-180"></i></a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
-</section>
 
-<section id="dashboard">
-    <div class="container text-center" style="margin-bottom: 10px; position: relative; top: 10rem;">
-        <div class="row">
-            <div class="col" id="manageCustomerClick">
-                <h2 style="color: green;">Customer</h2>
-                <img src="assets/images/customer.png" alt="...">
-                <h2>0</h2>
-            </div>
-            <div class="col" id="manageItemClick">
-                <h2 style="color: green;">Item</h2>
-                <img src="assets/images/item.png" alt="...">
-                <h2>0</h2>
-            </div>
-            <div class="col" id="manageOrderClick">
-                <h2 style="color: green;">Order</h2>
-                <img src="assets/images/place_order.png" alt="...">
-                <h2>0</h2>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="customers">
-    <main style="margin-top: 20px; z-index: 10">
-        <div class="accordion" id="accordionExample">
-            <div class="accordion-item  bg-secondary-subtle rounded-bottom-3" style="">
-                <h2 class="accordion-header rounded-bottom-3 ">
-                    <button aria-controls="collapseOne" aria-expanded="false" class="accordion-button rounded-bottom-3 px-5 bg-success-subtle text-black" data-bs-target="#collapseOne" data-bs-toggle="collapse" type="button">Add / Update Customers</button>
-                </h2>
-                <div class="accordion-collapse collapse" data-bs-parent="#accordionExample" id="collapseOne">
-
-                    <div class="container-fluid ">
-                        <div class="row w-100 justify-content-center mx-auto mt-4">
-                            <div class="col-10 col-sm-5  mb-3 mt-3 mx-lg-3">
-                                <label class="form-label" for="inputCustId">Customer ID:</label>
-                                <input class="form-control border-secondary-subtle border-3 rounded-5" id="inputCustId" placeholder="" type="text">
-                            </div>
-                            <div class="col-10 col-sm-5  mb-3 mt-3 mx-lg-3">
-                                <label class="form-label" for="inputCustName">Customer Name:</label>
-                                <input class="form-control border-secondary-subtle border-3 rounded-5" id="inputCustName" placeholder="" type="text">
-                            </div>
-                            <div class="col-10 col-sm-5  mb-3 mt-3 mx-lg-3">
-                                <label class="form-label" for="inputCustAddress">Customer Address:</label>
-                                <input class="form-control border-secondary-subtle border-3 rounded-5" id="inputCustAddress" placeholder="" type="text">
-                            </div>
-                            <div class="col-10 col-sm-5  mb-3 mt-3 mx-lg-3">
-                                <label class="form-label" for="inputCustContact">Customer Contact:</label>
-                                <input class="form-control border-secondary-subtle border-3 rounded-5" id="inputCustContact" placeholder="" type="text">
-                            </div>
-                        </div>
+    <main>
+        <section id="home-page">
+            <div class="container text-center" style="margin-bottom: 10px; position: relative; top: 10rem;">
+                <div class="row">
+                    <div class="col" id="manageCustomerClick">
+                        <h2 style="color: green;">Customer</h2>
+                        <img src="assets/images/customer.png" alt="...">
+                        <h2>0</h2>
                     </div>
-
-                    <div class="container-fluid mt-4 w-100 mb-5 px-5" id="btnContainer" style="height: max-content">
-                        <div class="row w-100">
-                            <div class="col-6 col-md-3 text-center py-2">
-                                <button id="btnSave" class="btn w-100 h-100 btn-success">Save</button>
-                            </div>
-                            <div class="col-6 col-md-3 text-center py-2">
-                                <button id="btnUpdate" class="btn w-100 h-100 btn-primary">Update</button>
-                            </div>
-                            <div class="col-6 col-md-3 text-center py-2">
-                                <button id="btnDelete" class="btn w-100 h-100 btn-danger">Delete</button>
-                            </div>
-                            <div class="col-6 col-md-3 text-center py-2">
-                                <button id="btnClear" class="btn w-100 h-100" style="background-color: grey; color: white">Clear</button>
-                            </div>
-                        </div>
+                    <div class="col" id="manageItemClick">
+                        <h2 style="color: green;">Item</h2>
+                        <img src="assets/images/item.png" alt="...">
+                        <h2>0</h2>
+                    </div>
+                    <div class="col" id="manageOrderClick">
+                        <h2 style="color: green;">Order</h2>
+                        <img src="assets/images/place_order.png" alt="...">
+                        <h2>0</h2>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <table class="table table-hover m-auto w-75 mt-5 mb-5 table-responsive table-bordered">
-            <thead>
-            <tr class="table-dark">
-                <th>ID</th>
-                <th>Name</th>
-                <th>Address</th>
-                <th>Contact</th>
-            </tr>
-            </thead>
-            <tbody id="tblCustomer" class="table-secondary">
-<!--            <tr>-->
-<!--                <td></td>-->
-<!--                <td></td>-->
-<!--                <td></td>-->
-<!--                <td></td>-->
-<!--            </tr>-->
-<!--            <tr>-->
-<!--                <td></td>-->
-<!--                <td></td>-->
-<!--                <td></td>-->
-<!--                <td></td>-->
-<!--            </tr>-->
-<!--            <tr>-->
-<!--                <td></td>-->
-<!--                <td></td>-->
-<!--                <td></td>-->
-<!--                <td></td>-->
-<!--            </tr>-->
-<!--            <tr>-->
-<!--                <td></td>-->
-<!--                <td></td>-->
-<!--                <td></td>-->
-<!--                <td></td>-->
-<!--            </tr>-->
-<!--            <tr>-->
-<!--                <td>C002</td>-->
-<!--                <td>Dinushan</td>-->
-<!--                <td>Galle</td>-->
-<!--                <td>0763445678</td>-->
-<!--            </tr>-->
-<!--            <tr>-->
-<!--                <td>C003</td>-->
-<!--                <td>Hasini</td>-->
-<!--                <td>Colombo</td>-->
-<!--                <td>0765758908</td>-->
-<!--            </tr>-->
-<!--            <tr>-->
-<!--                <td>C004</td>-->
-<!--                <td>Piyumika</td>-->
-<!--                <td>Colombo</td>-->
-<!--                <td>0763456790</td>-->
-<!--            </tr>-->
-            </tbody>
-        </table>
-    </main>
-</section>
-
-<section id="item">
-    <main style="margin-top: 20px; z-index: 10">
-        <div class="accordion" id="accordionExample">
-            <div class="accordion-item  bg-secondary-subtle rounded-bottom-3" style="">
-                <h2 class="accordion-header rounded-bottom-3 ">
-                    <button aria-controls="collapseOne" aria-expanded="false" class="accordion-button rounded-bottom-3 px-5 bg-success-subtle text-black " data-bs-target="#collapseOne" data-bs-toggle="collapse" type="button">Add / Update Item</button>
-                </h2>
-                <div class="accordion-collapse collapse" data-bs-parent="#accordionExample" id="collapseOne">
-
-                    <div class="container-fluid ">
-                        <div class="row w-100 justify-content-center mx-auto mt-4">
-                            <div class="col-10 col-sm-5  mb-3 mt-3 mx-lg-3">
-                                <label class="form-label" for="inputItemCode">Item Code:</label>
-                                <input class="form-control border-secondary-subtle border-3 rounded-5" id="inputItemCode" placeholder="" type="text">
-                            </div>
-                            <div class="col-10 col-sm-5  mb-3 mt-3 mx-lg-3">
-                                <label class="form-label" for="inputItemName">Description:</label>
-                                <input class="form-control border-secondary-subtle border-3 rounded-5" id="inputItemName" placeholder="" type="text">
-                            </div>
-                            <div class="col-10 col-sm-5  mb-3 mt-3 mx-lg-3">
-                                <label class="form-label" for="inputUnitPrice">Unit Price:</label>
-                                <input class="form-control border-secondary-subtle border-3 rounded-5" id="inputUnitPrice" placeholder="" type="text">
-                            </div>
-                            <div class="col-10 col-sm-5  mb-3 mt-3 mx-lg-3">
-                                <label class="form-label" for="inputQtyOnHand">Qty On Hand:</label>
-                                <input class="form-control border-secondary-subtle border-3 rounded-5" id="inputQtyOnHand" placeholder="" type="text">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="container-fluid mt-4 w-100 mb-5 px-5" id="btnContainer" style="height: max-content">
-                        <div class="row w-100">
-                            <div class="col-6 col-md-3 text-center py-2">
-                                <button id="itemSave" class="btn w-100 h-100 btn-success">Save</button>
-                            </div>
-                            <div class="col-6 col-md-3 text-center py-2">
-                                <button id="itemUpdate" class="btn w-100 h-100 btn-primary">Update</button>
-                            </div>
-                            <div class="col-6 col-md-3 text-center py-2">
-                                <button id="itemDelete" class="btn w-100 h-100 btn-danger">Delete</button>
-                            </div>
-                            <div class="col-6 col-md-3 text-center py-2">
-                                <button id="itemClear" class="btn w-100 h-100" style="background-color: grey; color: white">Clear</button>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-
-        <table class="table table-hover m-auto w-75 mt-5 mb-5 table-responsive table-bordered">
-            <thead>
-            <tr class="table-dark">
-                <th>Item Code</th>
-                <th>Description</th>
-                <th>Unit Price</th>
-                <th>Qty On Hand</th>
-            </tr>
-            </thead>
-            <tbody class="table-secondary" id="tblItem">
-<!--            <tr>-->
-<!--                <td>I001</td>-->
-<!--                <td>Soup</td>-->
-<!--                <td>200.00</td>-->
-<!--                <td>100</td>-->
-<!--            </tr>-->
-<!--            <tr>-->
-<!--                <td>I002</td>-->
-<!--                <td>Keeri Samba</td>-->
-<!--                <td>100.00</td>-->
-<!--                <td>1000</td>-->
-<!--            </tr>-->
-<!--            <tr>-->
-<!--                <td>I003</td>-->
-<!--                <td>sugar</td>-->
-<!--                <td>250.00</td>-->
-<!--                <td>1000</td>-->
-<!--            </tr>-->
-            </tbody>
-        </table>
-    </main>
-</section>
-
-<section id="order">
-    <!-- Invoice Details -->
-
-    <div class="container text-center" style="margin-top: 30px; background-color: #f5ffe6;">
-        <div class="row">
-            <div class="col" style="height: 330px; margin-right: 30px;">
-                <h3 class="bg-success" style="color: white; width: 400px;">Invoice Details</h3>
-
-                <div class="container text-center" style="margin-top: 30px;">
-                    <div class="row">
-                        <div class="col">
-                            <label class="form-label" for="inputOID">Order ID:</label>
-                            <input type="text" class="form-control" id="inputOID" placeholder="">
-                        </div>
-                        <div class="col">
-                            <label class="form-label" for="date">Date:</label>
-                            <input type="date" class="form-control" id="date" placeholder="">
-                        </div>
-                    </div>
-                </div>
-                <div class="container text-center">
-                    <div class="row">
-                        <div class="col">
-                            Cus ID :
-                            <select class="form-select" aria-label="Default select example">
-                                <option selected></option>
-                                <option value="1">C001</option>
-                                <option value="2">C002</option>
-                                <option value="3">C003</option>
-                            </select>
-                        </div>
-                        <div class="col">
-                            <label class="form-label" for="custName">Customer Name:</label>
-                            <input type="text" class="form-control" id="custName" placeholder="">
-                        </div>
-
-                        <div class="container text-center">
-                            <div class="row">
-                                <div class="col">
-                                    <label class="form-label" for="contact">Contact:</label>
-                                    <input type="text" class="form-control" id="contact" placeholder="">
+        <section id="customer-page">
+            <section id="customer-title" class="d-flex mt-5 mb-4 justify-content-center">
+            </section>
+            <section id="customer-content" class="container-fluid py-4 rounded-4">
+                <section class="d-flex justify-content-around flex-wrap-reverse">
+                    <section id="left-content" class="col-12 col-sm-8 my-2">
+                        <section id="customer-search" class="mb-5">
+                            <form class="row gx-3 gy-2 align-items-center">
+                                <div class="col-sm-3">
+                                    <label class="visually-hidden" for="cmbCustomerSearch">Preference</label>
+                                    <select class="form-select" id="cmbCustomerSearch">
+                                        <option value="ID">ID</option>
+                                        <option value="Name">Name</option>
+                                    </select>
                                 </div>
-                                <div class="col">
-                                    <label class="form-label" for="address">Address:</label>
-                                    <input type="text" class="form-control" id="address" placeholder="">
+                                <div class="w-50 col-sm-3">
+                                    <label class="visually-hidden" for="txtCustomerSearch">Name</label>
+                                    <input type="text" class="form-control" id="txtCustomerSearch" placeholder="Search customer">
+                                </div>
+                                <div class="col-auto">
+                                    <button id="btnCustomerSearch" type="button" class="btn btn-outline-primary">Search</button>
+                                </div>
+                                <div class="col-auto">
+                                    <button id="btnCustomerClear" type="button" class="btn btn-outline-warning">Clear</button>
+                                </div>
+                            </form>
+                        </section>
+
+                        <!--                    table-->
+                        <section id="customer-table" class="p-2 rounded-4 bg-light">
+                            <table id="tableCustomer" class="table">
+                                <thead>
+                                <tr>
+                                    <th scope="col" class="bg-success text-white">ID</th>
+                                    <th scope="col" class="bg-success text-white">Name</th>
+                                    <th scope="col" class="bg-success text-white">Address</th>
+                                    <th scope="col" class="bg-success text-white">Salary</th>
+                                </tr>
+                                </thead>
+                                <tbody id="tbody-customer" class="table-group-divider"></tbody>
+                            </table>
+                        </section>
+
+                    </section>
+                    <section id="right-content" class="d-flex col-8 col-sm-4 col-md-3 justify-content-end rounded-4">
+                        <section class="col-8 p-2 bg-light rounded-4 w-100">
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="txtCustomerID" placeholder="name@example.com">
+                                <label for="txtCustomerID">Customer ID</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="txtCustomerName" placeholder="name@example.com">
+                                <label for="txtCustomerName">Customer Name</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="txtCustomerAddress" placeholder="name@example.com">
+                                <label for="txtCustomerAddress">Address</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="number" class="form-control" id="txtCustomerSalary" placeholder="name@example.com">
+                                <label for="txtCustomerSalary">Salary</label>
+                            </div>
+                            <section class="d-flex flex-wrap justify-content-center gap-2">
+                                <button id="btnCustomerSave" type="button" class="btn btn-outline-success">Save</button>
+                                <button id="btnCustomerUpdate" type="button" class="btn btn-outline-primary">update</button>
+                                <button id="btnCustomerDelete" type="button" class="btn btn-outline-danger">Delete</button>
+                            </section>
+                        </section>
+                    </section>
+                </section>
+            </section>
+        </section>
+
+        <section id="item-page">
+            <section id="item-title" class=" d-flex mt-5 mb-4 justify-content-center">
+            </section>
+            <section id="item-content" class="container-fluid py-4 rounded-4">
+                <section class="d-flex justify-content-around flex-wrap-reverse">
+                    <section id="item-left-content" class="col-12 col-sm-8 my-2">
+                        <section id="item-search" class="mb-5">
+                            <form class="row gx-3 gy-2 align-items-center">
+                                <div class="col-sm-3">
+                                    <label class="visually-hidden" for="cmbItemSearch">Preference</label>
+                                    <select class="form-select" id="cmbItemSearch">
+                                        <option value="Code">Code</option>
+                                        <option value="Name">Name</option>
+                                    </select>
+                                </div>
+                                <div class="w-50 col-sm-3">
+                                    <label class="visually-hidden" for="txtItemSearch">Item</label>
+                                    <input type="text" class="form-control" id="txtItemSearch" placeholder="Search item">
+                                </div>
+                                <div class="col-auto">
+                                    <button id="btnItemSearch" type="button" class="btn btn-outline-primary">Search</button>
+                                </div>
+                                <div class="col-auto">
+                                    <button id="btnItemClear" type="button" class="btn btn-outline-warning">Clear</button>
+                                </div>
+                            </form>
+                        </section>
+
+                        <!--                    table-->
+                        <section id="item-table" class="p-2 rounded-4 bg-light">
+                            <table class="table">
+                                <thead>
+                                <tr>
+                                    <th scope="col" class="bg-success text-white">Code</th>
+                                    <th scope="col" class="bg-success text-white">Name</th>
+                                    <th scope="col" class="bg-success text-white">Quantity</th>
+                                    <th scope="col" class="bg-success text-white">Price</th>
+                                </tr>
+                                </thead>
+                                <tbody id="tbody-item" class="table-group-divider"></tbody>
+                            </table>
+                        </section>
+
+                    </section>
+                    <section id="item-right-content" class="d-flex col-8 col-sm-4 col-md-3 justify-content-end rounded-4">
+                        <section class="col-8 p-2 bg-light rounded-4 w-100">
+                            <div class="form-floating mb-3">
+                                <input type="email" class="form-control" id="txtItemCode" placeholder="name@example.com">
+                                <label for="txtItemCode">Item Code</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="txtItemName" placeholder="name@example.com">
+                                <label for="txtItemName">Item Name</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="txtItemQtyOnHand" placeholder="name@example.com">
+                                <label for="txtItemQtyOnHand">Item Quantity</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="txtItemPrice" placeholder="name@example.com">
+                                <label for="txtItemPrice">Price</label>
+                            </div>
+                            <section class="d-flex flex-wrap justify-content-center gap-2">
+                                <button id="btnItemSave" type="button" class="btn btn-outline-success">Save</button>
+                                <button id="btnItemUpdate" type="button" class="btn btn-outline-primary">update</button>
+                                <button id="btnItemDelete" type="button" class="btn btn-outline-danger">Delete</button>
+                            </section>
+                        </section>
+                    </section>
+                </section>
+            </section>
+        </section>
+
+        <section id="order-page">
+            <section id="title" class=" d-flex mt-5 mb-4 justify-content-center">
+            </section>
+            <section id="content" class="container-fluid py-4 rounded-4">
+                <section class="container-fluid">
+                    <section id="place-order-content" class="row d-flex justify-content-between flex-wrap">
+                        <section id="order-details" class="col-12 col-sm-8">
+                            <section id="invoice-details" class=" col-12 p-2 rounded-4">
+                                <div class="rounded-3 w-100 bg-success">
+                                    <h5 class="fw-normal ps-3 mb-0 py-1 text-white">Invoice Details</h5>
+                                </div>
+                                <div id="customer-detail-cover" class="row">
+                                    <div id="order-id" class="d-flex flex-wrap gap-5">
+                                        <div class="mt-1 col-5 col-md-3">
+                                            <label for="txtOrderId" class="form-label m-0">Order ID :</label>
+                                            <input type="text" class="form-control" id="txtOrderId" placeholder="Ex: OD-0001">
+                                        </div>
+                                        <div class="mt-1 col-5 col-md-3">
+                                            <label for="txtOrderDate" class="form-label m-0">Order Date :</label>
+                                            <input type="text" class="form-control" id="txtOrderDate" disabled="true">
+                                        </div>
+                                    </div>
+                                    <!--                order-id ////////////////////////-->
+                                    <div id="customer-id" class="d-flex flex-wrap align-items-center gap-3">
+                                        <div class="mt-1 col-5 col-md-3">
+                                            <label for="cmbCustomerIds" class="form-label m-0">Customer ID :</label>
+                                            <select id="cmbCustomerIds" class="form-select" aria-label="Default select example">
+
+                                            </select>
+                                        </div>
+                                        <div class="mt-1 col-5 col-md-4">
+                                            <label for="lblCustomerName" class="form-label m-0">Customer Name :</label>
+                                            <label id="lblCustomerName"class="form-label m-0 fw-semibold"></label>
+                                        </div>
+                                        <div class="mt-1 col-5 col-md-4">
+                                            <label for="lblCustomerAddress" class="form-label m-0">Customer Address :</label>
+                                            <label id="lblCustomerAddress" class="form-label m-0 fw-semibold"></label>
+                                        </div>
+                                    </div>
+                                    <!--                customer-id //////////////////////-->
+                                </div>
+                                <!--              customer-detail-cover/////////////////////-->
+                            </section>
+                            <!--           invoice-details ////////////////////////////-->
+                            <section id="item-details" class="mt-4 p-2 rounded-4">
+                                <div class="rounded-3 w-100 bg-success">
+                                    <h5 class="fw-normal ps-3 mb-0 py-1 text-white">Item Details</h5>
+                                </div>
+                                <div id="item-details-cover">
+                                    <div id="item-id" class="d-flex flex-wrap gap-5 align-items-center">
+                                        <div class="mt-1 col-4 col-md-3">
+                                            <label for="cmbItemCodes" class="form-label m-0">Item Code :</label>
+                                            <select id="cmbItemCodes" class="form-select" aria-label="Default select example">
+
+                                            </select>
+                                        </div>
+                                        <div class="mt-1 col-5 col-md-3">
+                                            <label for="txtOrderQty" class="form-label m-0">Order qty :</label>
+                                            <input type="number" class="form-control" id="txtOrderQty" >
+                                        </div>
+                                        <div class="col-auto">
+                                            <button id="btnAddToCart" type="button" class="btn btn-warning">Add to Cart</button>
+                                        </div>
+                                    </div>
+                                    <!--                item-id /////////////////-->
+                                    <div id="item-name" class="d-flex flex-wrap align-items-center gap-3">
+                                        <div class="mt-1 col-4 col-md-4">
+                                            <label for="lblItemName" class="form-label m-0">Item Name :</label>
+                                            <label id="lblItemName" class="form-label m-0 fw-semibold"></label>
+                                        </div>
+                                        <div class="mt-1 col-3 col-md-3">
+                                            <label for="lblItemUnitPrice" class="form-label m-0">Unit Price :</label>
+                                            <label id="lblItemUnitPrice" class="form-label m-0 fw-semibold"></label>
+                                        </div>
+                                        <div class="mt-1 col-3 col-md-3">
+                                            <label for="lblQtyOnHand" class="form-label m-0">Qty On Hand :</label>
+                                            <label id="lblQtyOnHand" class="form-label m-0 fw-semibold"></label>
+                                        </div>
+                                    </div>
+                                    <!--                item-name //////////////////-->
+                                </div>
+                                <!--              item-details-cover //////////////-->
+                            </section>
+                            <!--            item-details ////////////////////-->
+                        </section>
+                        <!--           order-details ////////////////////////////-->
+                        <section id="amount-details" class="col-4 p-2 rounded-4">
+                            <div id="sub-total" class="d-flex justify-content-center align-items-center gap-2 mb-2 mt-4">
+                                <label for="lblSubTotal" class="form-label m-0 text-danger fs-4 fw-semibold">Sub Total :</label>
+                                <label id="lblSubTotal" class="form-label m-0 fw-semibold text-danger fs-4"></label>
+                            </div>
+                            <div id="total" class="d-flex justify-content-center gap-2">
+                                <label for="lblTotal" class="form-label m-0 fs-5">Total :</label>
+                                <label id="lblTotal" class="form-label m-0 fs-5"></label>
+                            </div>
+                            <div id="enter-total-div" class="row d-flex justify-content-center gap-1 my-2">
+                                <div class="mt-1 col-6 col-md-5">
+                                    <label for="txtCash" class="form-label m-0">Cash :</label>
+                                    <input type="number" class="form-control" id="txtCash" >
+                                </div>
+                                <div class="mt-1 col-6 col-md-6">
+                                    <label for="txtDiscount" class="form-label m-0">Discount :</label>
+                                    <input type="number" class="form-control" id="txtDiscount" >
                                 </div>
                             </div>
-                        </div>
+                            <div id="balance" class="d-flex justify-content-start gap-2 my-3 ms-3">
+                                <label for="lblBalance" class="form-label m-0 fs-6">Balance :</label>
+                                <label id="lblBalance" class="form-label m-0 fs-6"></label>
+                            </div>
+                            <div class="col-auto d-flex justify-content-center mt-5">
+                                <button type="submit" class="btn btn-success">Place Order</button>
+                            </div>
+                            <!--            enter-total-div /////////////////////-->
+                        </section>
+                        <!--          amount-details ///////////////////-->
+                    </section>
+                    <!--          place-order-content ///////////////////////-->
+                </section>
+                <!--      table///////////////////////////////////////////////////////////////-->
+                <section id="order-table" class="pt-5 rounded-4 bg-light">
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th scope="col" class="bg-success text-white">Item Code</th>
+                            <th scope="col" class="bg-success text-white">Item Name</th>
+                            <th scope="col" class="bg-success text-white">Unit Price</th>
+                            <th scope="col" class="bg-success text-white">Quantity</th>
+                            <th scope="col" class="bg-success text-white">Total</th>
+                        </tr>
+                        </thead>
+                        <tbody id="tbody-orderCart" class="table-group-divider">
+                        </tbody>
+                    </table>
+                </section>
 
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- item Select -->
+            </section>
+        </section>
+    </main>
 
-        <div class="col" style="height: 330px; margin-right: 30px;">
-            <h3 class="bg-success" style="color: white;width: 400px;">Item Select</h3>
-            <!-- code here -->
-            <div class="container text-center" style="margin-top: 30px;">
-                <div class="row">
-                    <div class="col">
-                        Item Code :
-                        <select class="form-select" aria-label="Default select example">
-                            <option selected></option>
-                            <option value="1">I001</option>
-                            <option value="2">I002</option>
-                            <option value="3">I003</option>
-                        </select>
-                    </div>
-                    <div class="col">
-                        Item Name :
-                        <select class="form-select" aria-label="Default select example">
-                            <option selected></option>
-                            <option value="1">Soap</option>
-                            <option value="2">Keeri Samba</option>
-                            <option value="3">Sugar</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
-            <div class="container text-center">
-                <div class="row">
-                    <div class="col">
-                        <label class="form-label" for="price">Price:</label>
-                        <input type="text" class="form-control" id="price" placeholder="">
-
-                    </div>
-                    <div class="col">
-                        <label class="form-label" for="qty">QtyOnHand:</label>
-                        <input type="text" class="form-control" id="qty" placeholder="">
-
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="container text-center">
-                <div class="row">
-                    <div class="col">
-                        <label class="form-label" for="Oqty">OrderQty:</label>
-                        <input type="text" class="form-control" id="Oqty" placeholder="">
-
-                    </div>
-                    <div class="col">
-                        <button type="button" class="btn btn-danger" style="margin-top: 70px;">Add Item</button>
-                    </div>
-                </div>
-            </div>
-
-        </div>
+    <script src="assets/bootstrap-5.3.2-dist/bootstrap-5.3.2-dist/js/bootstrap.min.js"></script>
+    <script src="assets/bootstrap-5.3.2-dist/bootstrap-5.3.2-dist/js/code.jquery.com_jquery-3.7.1.min.js"></script>
+    <script src="controllers/DashboardController.js"></script>
+    <script src="db/db.js"></script>
+    <script src="controllers/CustomerController.js"></script>
+    <script src="controllers/validations/CustomerValidations.js"></script>
+    <script src="models/Customer.js"></script>
+    <script src="controllers/ItemController.js"></script>
+    <script src="controllers/validations/ItemValidations.js"></script>
+    <script src="models/Item.js"></script>
+    <script src="controllers/PlaceOrderController.js"></script>
+    <script src="models/CartTM.js"></script>
+    <script>
 
 
-        <!-- total part -->
-
-        <div class="col" style="height: 330px; height: 340px; width: auto; background-color: #e1ffbf;">
-            <!-- code here -->
-
-            <div class="container text-center">
-                <div class="row">
-                    <div class="col" style="color: blue;font-size: 30px;">
-                        Total
-                        <label for="exampleFormControlInput1" class="form-label"
-                               style="font-size: 40px;color: red;">1000.00</label>
-
-                    </div>
-                </div>
-            </div>
-
-            <div class="container text-center">
-                <div class="row">
-                    <div class="col">
-                        <label class="form-label" for="cash">Cash:</label>
-                        <input type="text" class="form-control" id="cash" placeholder="">
-                    </div>
-                </div>
-            </div>
-
-            <div class="container text-center">
-                <div class="row">
-                    <div class="col">
-                        Balance :
-                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
-                    </div>
-                </div>
-            </div>
-
-            <div class="container text-center">
-                <div class="row">
-                    <div class="col">
-                        <button type="button" class="btn btn-primary" style="margin-top: 30px;">Purchase</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="row mt-1 mt-md-2 mt-lg-5 justify-content-around">
-        <div class="col-10">
-
-            <div class="customeTableDiv">
-                <table class="table bg-light table-bordered w-100 h-100 table-hover">
-                    <thead class="bg-success text-light text-center">
-                    <tr>
-                        <th>Item Code</th>
-                        <th>Item Name</th>
-                        <th>Price</th>
-                        <th>Quantity</th>
-                        <th>Total</th>
-                    </tr>
-                    </thead>
-                    <tbody id="customerTable">
-                    <tr>
-                        <td>I002</td>
-                        <td>Soap</td>
-                        <td>200.00</td>
-                        <td>2</td>
-                        <td>400.00</td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
-</section>
-
-<script src="assets/bootstrap-5.3.2-dist/bootstrap-5.3.2-dist/js/code.jquery.com_jquery-3.7.1.min.js"></script>
-
-<script>
-    var customer = document.querySelector("#customers");
-    customer.style.display = 'none';
-
-    var item = document.querySelector("#item");
-    item.style.display = 'none';
-
-    var order = document.querySelector("#order");
-    order.style.display = 'none';
-
-    var header = document.querySelector("#header");
-    header.style.display = 'none';
-
-    var dashboard = document.querySelector("#dashboard");
-
-    var customerClick = document.querySelector("#customerClick");
-
-    var itemClick = document.querySelector("#itemClick");
-
-    var orderClick = document.querySelector("#orderClick");
+        // getAllCustomers();
+        //
+        // $('#btnCustomerSave').click(function () {
+        //     var customer= {
+        //         id: $('#txtCustomerID').val(),
+        //         name: $('#txtCustomerName').val(),
+        //         address: $('#txtCustomerAddress').val(),
+        //         salary: $('#txtCustomerSalary').val()
+        //     }
+        //     customerDB.push(customer);
+        //
+        //     getAllCustomers();
+        //     clearTextFields();
+        // });
+        //
+        // function getAllCustomers(){
+        //     $('#tbody-customer').empty();
+        //     for (let i=0; i<customerDB.length; i++){
+        //         let row= `<tr>
+        //         <th>${customerDB[i].id}</th>
+        //         <td>${customerDB[i].name}</td>
+        //         <td>${customerDB[i].address}</td>
+        //         <td>${customerDB[i].salary}</td>
+        //     </tr>`;
+        //
+        //         $('#tbody-customer').append(row);
+        //     }
+        //     bindEvents();
+        // }
+        //
+        // bindEvents();
+        //
+        // function bindEvents() {
+        //     $('#tbody-customer>tr').click(function () {
+        //         //console.log(this);//tr
+        //         //console.log($(this));//jquery ob
+        //         //console.log($(this).text());
+        //
+        //         let row = $(this);
+        //         // let customerID = row.find("th:eq(0)").text();
+        //         // let customerName = row.find("td:eq(0)").text();
+        //         // let address = row.find("td:eq(1)").text();
+        //         // let salary = parseInt(row.find("td:eq(2)").text());
+        //
+        //         let customerID = row.children().eq(0).text();
+        //         let customerName = row.children().eq(1).text();
+        //         let address = row.children().eq(2).text();
+        //         let salary = row.children().eq(3).text();
+        //
+        //         setTextFieldValues(customerID, customerName, address, salary);
+        //
+        //
+        //     });
+        // }
+        //
+        // function setTextFieldValues(id, name, address, salary){
+        //     $('#txtCustomerID').val(id);
+        //     $('#txtCustomerName').val(name);
+        //     $('#txtCustomerAddress').val(address);
+        //     $('#txtCustomerSalary').val(salary);
+        // };
+        //
+        // function clearTextFields() {
+        //     $('#txtCustomerID').val(null);
+        //     $('#txtCustomerName').val(null);
+        //     $('#txtCustomerAddress').val(null);
+        //     $('#txtCustomerSalary').val(null);
+        // }
 
 
-    document.querySelector("#manageCustomerClick").addEventListener("click", function () {
-        dashboard.style.display = 'none';
-        header.style.display = 'inline';
-        customer.style.display = 'inline';
-    });
 
-    document.querySelector("#manageItemClick").addEventListener("click", function () {
-        dashboard.style.display = 'none';
-        header.style.display = 'inline';
-        item.style.display = 'inline';
-    });
+        //old js - ///////////////////////////////////////////////////////////////////////////////////////
 
-    document.querySelector("#manageOrderClick").addEventListener("click", function () {
-        dashboard.style.display = 'none';
-        header.style.display = 'inline';
-        order.style.display = 'inline';
-    });
-
-
-    customerClick.addEventListener("click", function () {
-        customer.style.display = 'inline';
-        order.style.display = 'none';
-        header.style.display = 'inline';
-        item.style.display = 'none';
-
-    })
-
-    itemClick.addEventListener("click", function () {
-        customer.style.display = 'none';
-        order.style.display = 'none';
-        header.style.display = 'inline';
-        item.style.display = 'inline';
-
-    })
-
-    orderClick.addEventListener("click", function () {
-        customer.style.display = 'none';
-        order.style.display = 'inline';
-        header.style.display = 'inline';
-        item.style.display = 'none';
-
-    })
-
-    // let btnSave = document.querySelector("#btnSave");
-    // let btnGetAll = document.querySelector("#btnUpdate");
-    // let tBody = document.querySelector("#tblCustomer");
-    //
-    // let txtId = document.querySelector("#inputCustId");
-    // let txtName = document.querySelector("#inputCustName");
-    // let txtAddress = document.querySelector("#inputCustAddress");
-    // let txtContact = document.querySelector("#inputCustContact");
-
-    // var customers = [
-    //     {id: "C001", name: "Dasun", address: "Galle", contact:" 0775678913"},
-    //     {id: "C002", name: "Iman", address: "Mathara", contact: "0764352310"}
-    // ];
-    // btnSave.addEventListener("click", function () {
-    //     var customer ={
-    //         id:txtId.value,
-    //         name:txtName.value,
-    //         address:txtAddress.value,
-    //         contact:txtContact.value
-    //     }
-    //     customers.push(customer);
-    //     console.log(customers);
-    // });
-    //
-    // btnGetAll.addEventListener("click", function () {
-    //     for (let i = 0; i < customers.length; i++) {
-    //         let tr = document.createElement("tr");
-    //         let td1 = document.createElement("td");
-    //         td1.textContent=customers[i].id;
-    //         let td2 = document.createElement("td");
-    //         td2.textContent=customers[i].name;
-    //         let td3 = document.createElement("td");
-    //         td3.textContent=customers[i].address;
-    //         let td4 = document.createElement("td");
-    //         td4.textContent=customers[i].contact;
-    //         tr.append(td1,td2,td3,td4);
-    //         tBody.append(tr);
-    //     }
-    //
-    // });
-
-    // $("#btnSave").click(function () {
-    //
-    //     let cus_ID = $("#inputCustId").val();
-    //     let cus_Name = $("#inputCustName").val();
-    //     let cus_Address = $("#inputCustAddress").val();
-    //     let cus_contact = $("#inputCustContact").val();
-    //
-    //     var customer = {
-    //         id: cus_ID,
-    //         name: cus_Name,
-    //         address: cus_Address,
-    //         contact: cus_contact
-    //     }
-    //
-    //     //add customer to object to the array
-    //     customers.push(customer);
-    //     console.log(customers);
-    //
-    //         getAllCustomers();
-    //
-    // });
-    //
-    // $("#btnSave").click(function () {
-    //     getAllCustomers();
-    // });
-    //
-    // getAllCustomers();
-    //
-    // function getAllCustomers(){
-    //     //remove all the child elements of tbody before adding the table rows
-    //     $("#tblCustomer").empty();
-    //
-    //     for (let i = 0; i < customers.length; i++) {
-    //         let row = `<tr>
-    //                         <td>${customers[i].id}</td>
-    //                         <td>${customers[i].name}</td>
-    //                         <td>${customers[i].address}</td>
-    //                         <td>${customers[i].contact}</td>
-    //                     </tr>`;
-    //         $("#tblCustomer").append(row);
-    //     }
-    //     bindEvents();
-    // }
-    //
-    // bindEvents();
-    //
-    // function bindEvents() {
-    //     $('#tblCustomer>tr').click(function () {
-    //         // console.log(this);//tr -> this will return tr html element
-    //         // console.log($(this));//jquery ob //if we want to access jQuery method we have to convert it to a jquery object
-    //         // console.log($(this).text()); // now here it will return all the text of tr
-    //
-    //         let id = $(this).children(':nth-child(1)').text();
-    //         let name = $(this).children(':nth-child(2)').text();
-    //         let address = $(this).children(':nth-child(3)').text();
-    //         let contact = $(this).children(':nth-child(4)').text();
-    //
-    //         setTextFieldValues(id, name, address, contact);
-    //     });
-    // }
-    //
-    // function setTextFieldValues(id, name, address, contact) {
-    //     $("#inputCustId").val(id);
-    //     $("#inputCustName").val(name);
-    //     $("#inputCustAddress").val(address);
-    //     $("#inputCustContact").val(contact);
-    // }
+        // let txtCustID = document.querySelector("#floatingInputCustID");
+        // let txtCustName = document.querySelector("#floatingInputCustName");
+        // let txtCustAddress = document.querySelector("#floatingInputCustAddress");
+        // let txtCustSalary = document.querySelector("#floatingInputCustSalary");
+        //
+        // let tBodyCust = document.querySelector("#tbody");
+        //
+        // let btnCustSave = document.querySelector("#btnCustomerSave");
+        //
+        // let custList = new Array();
+        // btnCustSave.addEventListener("click",function () {
+        //
+        //     var customer={
+        //         id:txtCustID.value,
+        //         name:txtCustName.value,
+        //         address:txtCustAddress.value,
+        //         salary:txtCustSalary.value,
+        //     }
+        //
+        //     custList.push(customer);
+        //     console.log(custList);
+        //
+        //     var tr = document.createElement("tr");
+        //     var th = document.createElement("th");
+        //     var td1 = document.createElement("td");
+        //     var td2 = document.createElement("td");
+        //     var td3 = document.createElement("td");
+        //
+        //     th.textContent = customer.id;
+        //     td1.textContent = customer.name;
+        //     td2.textContent = customer.address;
+        //     td3.textContent = customer.salary;
+        //     tr.append(th, td1, td2, td3);
+        //
+        //
+        //     tBodyCust.append(tr);
+        //
+        // });
 
 
-</script>
 
-<script src="assets/bootstrap-5.3.2-dist/bootstrap-5.3.2-dist/js/code.jquery.com_jquery-3.7.1.min.js"></script>
-<script src="assets/bootstrap-5.3.2-dist/bootstrap-5.3.2-dist/js/bootstrap.min.js"></script>
-<!--<script src="controller/DashboardController.js"></script>-->
-<script src="db/db.js"></script>
-<script src="models/Customer.js"></script>
-<script src="models/Item.js"></script>
-<script src="models/Order.js"></script>
-<script src="models/OrderDetails.js"></script>
-<script src="controller/CustomerController.js"></script>
-<script src="controller/ItemController.js"></script>
-<script src="controller/PurchaseOrderController.js"></script>
-<script src="controller/validations/CustomerValidations.js"></script>
-<script src="controller/validations/ItemValidations.js"></script>
-<script src="controller/validations/OrderValidations.js"></script>
-
-<script src="assets/bootstrap-5.3.2-dist/bootstrap-5.3.2-dist/js/bootstrap.min.js"></script>
+    </script>
 </body>
 </html>

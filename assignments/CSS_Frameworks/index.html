@@ -11,36 +11,36 @@
 <body>
 
 <header>
-
-    <nav class="navbar navbar-expand-lg bg-body-tertiary" style="padding-top: 0;">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid" style="background-color: #6eff65; height: 70px;">
-            <a class="navbar-brand" href="#">POS</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <div id="logo-div" class="d-flex">
+                <h1 class="navbar-brand me-5 ms-2 fs-4">POS System</h1>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav" style="background-color: #6eff65;">
-                <ul class="navbar-nav"
-                    style="font-family:sans-serif; font-weight:bold;margin: 10px;">
-                    <li class="nav-item" style="background-color: #6eff65; ">
-                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+            <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+                <ul class="navbar-nav gap-2">
+                    <li id="home-nav" class="nav-item">
+                        <!--                            <a class="nav-link active fw-medium text-body-secondary" aria-current="page" href="#"></i>Home</a>-->
+                        <a class="nav-link fw-medium" href="index.html" style="font-size: 15px">Home</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="customer.html">Customers</a>
+                    <li id="customer-nav" class="nav-item">
+                        <a class=" nav-link fw-medium" href="customer.html" style="font-size: 15px">Customers</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="item.html">Items</a>
+                    <li id="item-nav" class="nav-item">
+                        <a class="nav-link fw-medium" href="item.html" style="font-size: 15px">Items</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="order.html">Orders</a>
+                    <li id="order-nav" class="nav-item">
+                        <a class="nav-link fw-medium" href="order.html" style="font-size: 15px">Place Orders</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav gap-2">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Sign up</a>
+                    <li id="sign-up-nav" class="nav-item">
+                        <a class="nav-link" href="#"><i class="fs-5 fa-solid fa-user-plus"></i></a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Log out</a>
+                    <li id="log-in-nav" class="nav-item">
+                        <a class="nav-link" href="#"><i class="fs-5 fa-solid fa-arrow-right-from-bracket fa-rotate-180"></i></a>
                     </li>
                 </ul>
             </div>
@@ -48,21 +48,26 @@
     </nav>
 </header>
 
-<div class="container text-center" style="margin-bottom: 10px;">
-    <div class="row">
-        <div class="col">
-            <img src="assests/images/customer.png" alt="...">
-            <h2>0</h2>
+    <section id="home-page">
+        <div class="container text-center" style="margin-bottom: 10px; position: relative; top: 10rem;">
+            <div class="row">
+                <div class="col" id="manageCustomerClick">
+                    <h2 style="color: green;">Customer</h2>
+                    <img src="assests/images/customer.png" alt="...">
+                    <h2>0</h2>
+                </div>
+                <div class="col" id="manageItemClick">
+                    <h2 style="color: green;">Item</h2>
+                    <img src="assests/images/item.png" alt="...">
+                    <h2>0</h2>
+                </div>
+                <div class="col" id="manageOrderClick">
+                    <h2 style="color: green;">Order</h2>
+                    <img src="assests/images/place_order.png" alt="...">
+                    <h2>0</h2>
+                </div>
+            </div>
         </div>
-        <div class="col">
-            <img src="assests/images/item.png" alt="...">
-            <h2>0</h2>
-        </div>
-        <div class="col">
-            <img src="assests/images/place_order.png" alt="...">
-            <h2>0</h2>
-        </div>
-    </div>
-</div>
+    </section>
 </body>
 </html>

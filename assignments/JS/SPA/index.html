@@ -51,7 +51,7 @@
     </header>
 </section>
 
-<section id="dashboard">
+<section id="home-page">
     <div class="container text-center" style="margin-bottom: 10px; position: relative; top: 10rem;">
         <div class="row">
             <div class="col" id="manageCustomerClick">
@@ -73,424 +73,307 @@
     </div>
 </section>
 
-<section id="customer">
-    <main style="margin-top: 20px; z-index: 10">
-        <div class="accordion" id="accordionExample">
-            <div class="accordion-item  bg-secondary-subtle rounded-bottom-3" style="">
-                <h2 class="accordion-header rounded-bottom-3 ">
-                    <button aria-controls="collapseOne" aria-expanded="false" class="accordion-button rounded-bottom-3 px-5 bg-success-subtle text-black" data-bs-target="#collapseOne" data-bs-toggle="collapse" type="button">Add / Update Customers</button>
-                </h2>
-                <div class="accordion-collapse collapse" data-bs-parent="#accordionExample" id="collapseOne">
-
-                    <div class="container-fluid ">
-                        <div class="row w-100 justify-content-center mx-auto mt-4">
-                            <div class="col-10 col-sm-5  mb-3 mt-3 mx-lg-3">
-                                <label class="form-label" for="inputCustId">Customer ID:</label>
-                                <input class="form-control border-secondary-subtle border-3 rounded-5" id="inputCustId" placeholder="" type="text">
-                            </div>
-                            <div class="col-10 col-sm-5  mb-3 mt-3 mx-lg-3">
-                                <label class="form-label" for="inputCustName">Customer Name:</label>
-                                <input class="form-control border-secondary-subtle border-3 rounded-5" id="inputCustName" placeholder="" type="text">
-                            </div>
-                            <div class="col-10 col-sm-5  mb-3 mt-3 mx-lg-3">
-                                <label class="form-label" for="inputCustAddress">Customer Address:</label>
-                                <input class="form-control border-secondary-subtle border-3 rounded-5" id="inputCustAddress" placeholder="" type="text">
-                            </div>
-                            <div class="col-10 col-sm-5  mb-3 mt-3 mx-lg-3">
-                                <label class="form-label" for="inputCustContact">Customer Contact:</label>
-                                <input class="form-control border-secondary-subtle border-3 rounded-5" id="inputCustContact" placeholder="" type="text">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="container-fluid mt-4 w-100 mb-5 px-5" id="btnContainer" style="height: max-content">
-                        <div class="row w-100">
-                            <div class="col-6 col-md-3 text-center py-2">
-                                <button id="btnSave" class="btn w-100 h-100 btn-success">Save</button>
-                            </div>
-                            <div class="col-6 col-md-3 text-center py-2">
-                                <button id="btnUpdate" class="btn w-100 h-100 btn-primary">Update</button>
-                            </div>
-                            <div class="col-6 col-md-3 text-center py-2">
-                                <button id="btnDelete" class="btn w-100 h-100 btn-danger">Delete</button>
-                            </div>
-                            <div class="col-6 col-md-3 text-center py-2">
-                                <button id="btnClear" class="btn w-100 h-100" style="background-color: grey; color: white">Clear</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row justify-content-around" style="height: max-content; padding-top: 40px; margin-right: 0">
-            <div class="col-10 col-md-5 col-lg-5 p-0" style="background-color: azure">
-                <h4 class="text-center bg-success p-2 text-light">Search Customer</h4>
-                <form>
-                    <div class="mb-3 ms-3 me-3">
-                        <input class="form-control" id="custId" placeholder="Input Customer ID" type="text">
-                    </div>
-                    <button class="btn btn-primary ms-3 mb-3 ms-md-3 ms-lg-3" type="submit">Search</button>
-
-                </form>
-            </div>
-        </div>
-
-        <table class="table table-hover m-auto w-75 mt-5 mb-5 table-responsive table-bordered">
-            <thead>
-            <tr class="table-dark">
-                <th>ID</th>
-                <th>Name</th>
-                <th>Address</th>
-                <th>Contact</th>
-            </tr>
-            </thead>
-            <tbody id="tblCustomer" class="table-secondary">
-<!--            <tr>-->
-<!--                <td></td>-->
-<!--                <td></td>-->
-<!--                <td></td>-->
-<!--                <td></td>-->
-<!--            </tr>-->
-<!--            <tr>-->
-<!--                <td></td>-->
-<!--                <td></td>-->
-<!--                <td></td>-->
-<!--                <td></td>-->
-<!--            </tr>-->
-<!--            <tr>-->
-<!--                <td></td>-->
-<!--                <td></td>-->
-<!--                <td></td>-->
-<!--                <td></td>-->
-<!--            </tr>-->
-<!--            <tr>-->
-<!--                <td></td>-->
-<!--                <td></td>-->
-<!--                <td></td>-->
-<!--                <td></td>-->
-<!--            </tr>-->
-<!--            <tr>-->
-<!--                <td>C002</td>-->
-<!--                <td>Dinushan</td>-->
-<!--                <td>Galle</td>-->
-<!--                <td>0763445678</td>-->
-<!--            </tr>-->
-<!--            <tr>-->
-<!--                <td>C003</td>-->
-<!--                <td>Hasini</td>-->
-<!--                <td>Colombo</td>-->
-<!--                <td>0765758908</td>-->
-<!--            </tr>-->
-<!--            <tr>-->
-<!--                <td>C004</td>-->
-<!--                <td>Piyumika</td>-->
-<!--                <td>Colombo</td>-->
-<!--                <td>0763456790</td>-->
-<!--            </tr>-->
-            </tbody>
-        </table>
-    </main>
-</section>
-
-<section id="item">
-    <main style="margin-top: 20px; z-index: 10">
-        <div class="accordion" id="accordionExample">
-            <div class="accordion-item  bg-secondary-subtle rounded-bottom-3" style="">
-                <h2 class="accordion-header rounded-bottom-3 ">
-                    <button aria-controls="collapseOne" aria-expanded="false" class="accordion-button rounded-bottom-3 px-5 bg-success-subtle text-black " data-bs-target="#collapseOne" data-bs-toggle="collapse" type="button">Add / Update Item</button>
-                </h2>
-                <div class="accordion-collapse collapse" data-bs-parent="#accordionExample" id="collapseOne">
-
-                    <div class="container-fluid ">
-                        <div class="row w-100 justify-content-center mx-auto mt-4">
-                            <div class="col-10 col-sm-5  mb-3 mt-3 mx-lg-3">
-                                <label class="form-label" for="inputItemCode">Item Code:</label>
-                                <input class="form-control border-secondary-subtle border-3 rounded-5" id="inputItemCode" placeholder="" type="text">
-                            </div>
-                            <div class="col-10 col-sm-5  mb-3 mt-3 mx-lg-3">
-                                <label class="form-label" for="inputItemName">Item Name:</label>
-                                <input class="form-control border-secondary-subtle border-3 rounded-5" id="inputItemName" placeholder="" type="text">
-                            </div>
-                            <div class="col-10 col-sm-5  mb-3 mt-3 mx-lg-3">
-                                <label class="form-label" for="inputUnitPrice">Unit Price:</label>
-                                <input class="form-control border-secondary-subtle border-3 rounded-5" id="inputUnitPrice" placeholder="" type="text">
-                            </div>
-                            <div class="col-10 col-sm-5  mb-3 mt-3 mx-lg-3">
-                                <label class="form-label" for="inputQtyOnHand">Qty On Hand:</label>
-                                <input class="form-control border-secondary-subtle border-3 rounded-5" id="inputQtyOnHand" placeholder="" type="text">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="container-fluid mt-4 w-100 mb-5 px-5" id="btnContainer" style="height: max-content">
-                        <div class="row w-100">
-                            <div class="col-6 col-md-3 text-center py-2">
-                                <button class="btn w-100 h-100 btn-success">Save</button>
-                            </div>
-                            <div class="col-6 col-md-3 text-center py-2">
-                                <button class="btn w-100 h-100 btn-primary">Update</button>
-                            </div>
-                            <div class="col-6 col-md-3 text-center py-2">
-                                <button class="btn w-100 h-100 btn-danger">Delete</button>
-                            </div>
-                            <div class="col-6 col-md-3 text-center py-2">
-                                <button class="btn w-100 h-100" style="background-color: grey; color: white">Clear</button>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-
-        <div class="row justify-content-around" style="height: max-content; padding-top: 40px; margin-right: 0">
-            <div class="col-10 col-md-5 col-lg-5 p-0" style="background-color: azure">
-                <h4 class="text-center bg-success p-2 text-light">Search Item</h4>
-                <form>
-                    <div class="mb-3 ms-3 me-3">
-                        <input class="form-control" id="itemId" placeholder="Input Item Code" type="text">
-                    </div>
-                    <button class="btn btn-primary ms-3 mb-3 ms-md-3 ms-lg-3" type="submit">Search</button>
-
-                </form>
-            </div>
-        </div>
-
-        <table class="table table-hover m-auto w-75 mt-5 mb-5 table-responsive table-bordered">
-            <thead>
-            <tr class="table-dark">
-                <th>Item Code</th>
-                <th>Name</th>
-                <th>Unit Price</th>
-                <th>Qty On Hand</th>
-            </tr>
-            </thead>
-            <tbody class="table-secondary">
-            <tr>
-                <td>I001</td>
-                <td>Soup</td>
-                <td>200.00</td>
-                <td>100</td>
-            </tr>
-            <tr>
-                <td>I002</td>
-                <td>Keeri Samba</td>
-                <td>100.00</td>
-                <td>1000</td>
-            </tr>
-            <tr>
-                <td>I003</td>
-                <td>sugar</td>
-                <td>250.00</td>
-                <td>1000</td>
-            </tr>
-            </tbody>
-        </table>
-    </main>
-</section>
-
-<section id="order">
-    <!-- INvoice Details -->
-
-    <div class="container text-center" style="margin-top: 30px; background-color: #f5ffe6;">
-        <div class="row">
-            <div class="col" style="height: 330px; margin-right: 30px;">
-                <h3 class="bg-success" style="color: white; width: 400px;">Invoice Details</h3>
-
-                <div class="container text-center" style="margin-top: 30px;">
-                    <div class="row">
-                        <div class="col">
-                            <label class="form-label" for="inputOID">Order ID:</label>
-                            <input type="text" class="form-control" id="inputOID" placeholder="">
-                        </div>
-                        <div class="col">
-                            <label class="form-label" for="date">Date:</label>
-                            <input type="date" class="form-control" id="date" placeholder="">
-                        </div>
-                    </div>
-                </div>
-                <div class="container text-center">
-                    <div class="row">
-                        <div class="col">
-                            Cus ID :
-                            <select class="form-select" aria-label="Default select example">
-                                <option selected></option>
-                                <option value="1">C001</option>
-                                <option value="2">C002</option>
-                                <option value="3">C003</option>
+<section id="customer-page">
+    <section id="customer-title" class="d-flex mt-5 mb-4 justify-content-center">
+    </section>
+    <section id="customer-content" class="container-fluid py-4 rounded-4">
+        <section class="d-flex justify-content-around flex-wrap-reverse">
+            <section id="left-content" class="col-12 col-sm-8 my-2">
+                <section id="customer-search" class="mb-5">
+                    <form class="row gx-3 gy-2 align-items-center">
+                        <div class="col-sm-3">
+                            <label class="visually-hidden" for="cmbCustomerSearch">Preference</label>
+                            <select class="form-select" id="cmbCustomerSearch">
+                                <option value="ID">ID</option>
+                                <option value="Name">Name</option>
                             </select>
                         </div>
-                        <div class="col">
-                            <label class="form-label" for="custName">Customer Name:</label>
-                            <input type="text" class="form-control" id="custName" placeholder="">
+                        <div class="w-50 col-sm-3">
+                            <label class="visually-hidden" for="txtCustomerSearch">Name</label>
+                            <input type="text" class="form-control" id="txtCustomerSearch" placeholder="Search customer">
                         </div>
+                        <div class="col-auto">
+                            <button id="btnCustomerSearch" type="button" class="btn btn-outline-primary">Search</button>
+                        </div>
+                        <div class="col-auto">
+                            <button id="btnCustomerClear" type="button" class="btn btn-outline-warning">Clear</button>
+                        </div>
+                    </form>
+                </section>
 
-                        <div class="container text-center">
-                            <div class="row">
-                                <div class="col">
-                                    <label class="form-label" for="salary">Salary:</label>
-                                    <input type="text" class="form-control" id="salary" placeholder="">
+                <!--                    table-->
+                <section id="customer-table" class="p-2 rounded-4 bg-light">
+                    <table id="tableCustomer" class="table">
+                        <thead>
+                        <tr>
+                            <th scope="col" class="bg-success text-white">ID</th>
+                            <th scope="col" class="bg-success text-white">Name</th>
+                            <th scope="col" class="bg-success text-white">Address</th>
+                            <th scope="col" class="bg-success text-white">Salary</th>
+                        </tr>
+                        </thead>
+                        <tbody id="tbody-customer" class="table-group-divider"></tbody>
+                    </table>
+                </section>
+
+            </section>
+            <section id="right-content" class="d-flex col-8 col-sm-4 col-md-3 justify-content-end rounded-4">
+                <section class="col-8 p-2 bg-light rounded-4 w-100">
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="txtCustomerID" placeholder="name@example.com">
+                        <label for="txtCustomerID">Customer ID</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="txtCustomerName" placeholder="name@example.com">
+                        <label for="txtCustomerName">Customer Name</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="txtCustomerAddress" placeholder="name@example.com">
+                        <label for="txtCustomerAddress">Address</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="number" class="form-control" id="txtCustomerSalary" placeholder="name@example.com">
+                        <label for="txtCustomerSalary">Salary</label>
+                    </div>
+                    <section class="d-flex flex-wrap justify-content-center gap-2">
+                        <button id="btnCustomerSave" type="button" class="btn btn-outline-success">Save</button>
+                        <button id="btnCustomerUpdate" type="button" class="btn btn-outline-primary">update</button>
+                        <button id="btnCustomerDelete" type="button" class="btn btn-outline-danger">Delete</button>
+                    </section>
+                </section>
+            </section>
+        </section>
+    </section>
+</section>
+
+<section id="item-page">
+    <section id="item-title" class=" d-flex mt-5 mb-4 justify-content-center">
+    </section>
+    <section id="item-content" class="container-fluid py-4 rounded-4">
+        <section class="d-flex justify-content-around flex-wrap-reverse">
+            <section id="item-left-content" class="col-12 col-sm-8 my-2">
+                <section id="item-search" class="mb-5">
+                    <form class="row gx-3 gy-2 align-items-center">
+                        <div class="col-sm-3">
+                            <label class="visually-hidden" for="cmbItemSearch">Preference</label>
+                            <select class="form-select" id="cmbItemSearch">
+                                <option value="Code">Code</option>
+                                <option value="Name">Name</option>
+                            </select>
+                        </div>
+                        <div class="w-50 col-sm-3">
+                            <label class="visually-hidden" for="txtItemSearch">Item</label>
+                            <input type="text" class="form-control" id="txtItemSearch" placeholder="Search item">
+                        </div>
+                        <div class="col-auto">
+                            <button id="btnItemSearch" type="button" class="btn btn-outline-primary">Search</button>
+                        </div>
+                        <div class="col-auto">
+                            <button id="btnItemClear" type="button" class="btn btn-outline-warning">Clear</button>
+                        </div>
+                    </form>
+                </section>
+
+                <!--                    table-->
+                <section id="item-table" class="p-2 rounded-4 bg-light">
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th scope="col" class="bg-success text-white">Code</th>
+                            <th scope="col" class="bg-success text-white">Name</th>
+                            <th scope="col" class="bg-success text-white">Quantity</th>
+                            <th scope="col" class="bg-success text-white">Price</th>
+                        </tr>
+                        </thead>
+                        <tbody id="tbody-item" class="table-group-divider"></tbody>
+                    </table>
+                </section>
+
+            </section>
+            <section id="item-right-content" class="d-flex col-8 col-sm-4 col-md-3 justify-content-end rounded-4">
+                <section class="col-8 p-2 bg-light rounded-4 w-100">
+                    <div class="form-floating mb-3">
+                        <input type="email" class="form-control" id="txtItemCode" placeholder="name@example.com">
+                        <label for="txtItemCode">Item Code</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="txtItemName" placeholder="name@example.com">
+                        <label for="txtItemName">Item Name</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="txtItemQtyOnHand" placeholder="name@example.com">
+                        <label for="txtItemQtyOnHand">Item Quantity</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="txtItemPrice" placeholder="name@example.com">
+                        <label for="txtItemPrice">Price</label>
+                    </div>
+                    <section class="d-flex flex-wrap justify-content-center gap-2">
+                        <button id="btnItemSave" type="button" class="btn btn-outline-success">Save</button>
+                        <button id="btnItemUpdate" type="button" class="btn btn-outline-primary">update</button>
+                        <button id="btnItemDelete" type="button" class="btn btn-outline-danger">Delete</button>
+                    </section>
+                </section>
+            </section>
+        </section>
+    </section>
+</section>
+
+<section id="order-page">
+    <section id="title" class=" d-flex mt-5 mb-4 justify-content-center">
+    </section>
+    <section id="content" class="container-fluid py-4 rounded-4">
+        <section class="container-fluid">
+            <section id="place-order-content" class="row d-flex justify-content-between flex-wrap">
+                <section id="order-details" class="col-12 col-sm-8">
+                    <section id="invoice-details" class=" col-12 p-2 rounded-4">
+                        <div class="rounded-3 w-100 bg-success">
+                            <h5 class="fw-normal ps-3 mb-0 py-1 text-white">Invoice Details</h5>
+                        </div>
+                        <div id="customer-detail-cover" class="row">
+                            <div id="order-id" class="d-flex flex-wrap gap-5">
+                                <div class="mt-1 col-5 col-md-3">
+                                    <label for="txtOrderId" class="form-label m-0">Order ID :</label>
+                                    <input type="text" class="form-control" id="txtOrderId" placeholder="Ex: OD-0001">
                                 </div>
-                                <div class="col">
-                                    <label class="form-label" for="address">Address:</label>
-                                    <input type="text" class="form-control" id="address" placeholder="">
+                                <div class="mt-1 col-5 col-md-3">
+                                    <label for="txtOrderDate" class="form-label m-0">Order Date :</label>
+                                    <input type="text" class="form-control" id="txtOrderDate" disabled="true">
                                 </div>
                             </div>
+                            <!--                order-id ////////////////////////-->
+                            <div id="customer-id" class="d-flex flex-wrap align-items-center gap-3">
+                                <div class="mt-1 col-5 col-md-3">
+                                    <label for="cmbCustomerIds" class="form-label m-0">Customer ID :</label>
+                                    <select id="cmbCustomerIds" class="form-select" aria-label="Default select example">
+
+                                    </select>
+                                </div>
+                                <div class="mt-1 col-5 col-md-4">
+                                    <label for="lblCustomerName" class="form-label m-0">Customer Name :</label>
+                                    <label id="lblCustomerName"class="form-label m-0 fw-semibold"></label>
+                                </div>
+                                <div class="mt-1 col-5 col-md-4">
+                                    <label for="lblCustomerAddress" class="form-label m-0">Customer Address :</label>
+                                    <label id="lblCustomerAddress" class="form-label m-0 fw-semibold"></label>
+                                </div>
+                            </div>
+                            <!--                customer-id //////////////////////-->
                         </div>
+                        <!--              customer-detail-cover/////////////////////-->
+                    </section>
+                    <!--           invoice-details ////////////////////////////-->
+                    <section id="item-details" class="mt-4 p-2 rounded-4">
+                        <div class="rounded-3 w-100 bg-success">
+                            <h5 class="fw-normal ps-3 mb-0 py-1 text-white">Item Details</h5>
+                        </div>
+                        <div id="item-details-cover">
+                            <div id="item-id" class="d-flex flex-wrap gap-5 align-items-center">
+                                <div class="mt-1 col-4 col-md-3">
+                                    <label for="cmbItemCodes" class="form-label m-0">Item Code :</label>
+                                    <select id="cmbItemCodes" class="form-select" aria-label="Default select example">
 
+                                    </select>
+                                </div>
+                                <div class="mt-1 col-5 col-md-3">
+                                    <label for="txtOrderQty" class="form-label m-0">Order qty :</label>
+                                    <input type="number" class="form-control" id="txtOrderQty" >
+                                </div>
+                                <div class="col-auto">
+                                    <button id="btnAddToCart" type="button" class="btn btn-warning">Add to Cart</button>
+                                </div>
+                            </div>
+                            <!--                item-id /////////////////-->
+                            <div id="item-name" class="d-flex flex-wrap align-items-center gap-3">
+                                <div class="mt-1 col-4 col-md-4">
+                                    <label for="lblItemName" class="form-label m-0">Item Name :</label>
+                                    <label id="lblItemName" class="form-label m-0 fw-semibold"></label>
+                                </div>
+                                <div class="mt-1 col-3 col-md-3">
+                                    <label for="lblItemUnitPrice" class="form-label m-0">Unit Price :</label>
+                                    <label id="lblItemUnitPrice" class="form-label m-0 fw-semibold"></label>
+                                </div>
+                                <div class="mt-1 col-3 col-md-3">
+                                    <label for="lblQtyOnHand" class="form-label m-0">Qty On Hand :</label>
+                                    <label id="lblQtyOnHand" class="form-label m-0 fw-semibold"></label>
+                                </div>
+                            </div>
+                            <!--                item-name //////////////////-->
+                        </div>
+                        <!--              item-details-cover //////////////-->
+                    </section>
+                    <!--            item-details ////////////////////-->
+                </section>
+                <!--           order-details ////////////////////////////-->
+                <section id="amount-details" class="col-4 p-2 rounded-4">
+                    <div id="sub-total" class="d-flex justify-content-center align-items-center gap-2 mb-2 mt-4">
+                        <label for="lblSubTotal" class="form-label m-0 text-danger fs-4 fw-semibold">Sub Total :</label>
+                        <label id="lblSubTotal" class="form-label m-0 fw-semibold text-danger fs-4"></label>
                     </div>
-                </div>
-            </div>
-        </div>
-        <!-- item Select -->
-
-        <div class="col" style="height: 330px; margin-right: 30px;">
-            <h3 class="bg-success" style="color: white;width: 400px;">Item Select</h3>
-            <!-- code here -->
-            <div class="container text-center" style="margin-top: 30px;">
-                <div class="row">
-                    <div class="col">
-                        Item Code :
-                        <select class="form-select" aria-label="Default select example">
-                            <option selected></option>
-                            <option value="1">I001</option>
-                            <option value="2">I002</option>
-                            <option value="3">I003</option>
-                        </select>
+                    <div id="total" class="d-flex justify-content-center gap-2">
+                        <label for="lblTotal" class="form-label m-0 fs-5">Total :</label>
+                        <label id="lblTotal" class="form-label m-0 fs-5"></label>
                     </div>
-                    <div class="col">
-                        Item Name :
-                        <select class="form-select" aria-label="Default select example">
-                            <option selected></option>
-                            <option value="1">Soap</option>
-                            <option value="2">Keeri Samba</option>
-                            <option value="3">Sugar</option>
-                        </select>
+                    <div id="enter-total-div" class="row d-flex justify-content-center gap-1 my-2">
+                        <div class="mt-1 col-6 col-md-5">
+                            <label for="txtCash" class="form-label m-0">Cash :</label>
+                            <input type="number" class="form-control" id="txtCash" >
+                        </div>
+                        <div class="mt-1 col-6 col-md-6">
+                            <label for="txtDiscount" class="form-label m-0">Discount :</label>
+                            <input type="number" class="form-control" id="txtDiscount" >
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="container text-center">
-                <div class="row">
-                    <div class="col">
-                        <label class="form-label" for="price">Price:</label>
-                        <input type="text" class="form-control" id="price" placeholder="">
-
+                    <div id="balance" class="d-flex justify-content-start gap-2 my-3 ms-3">
+                        <label for="lblBalance" class="form-label m-0 fs-6">Balance :</label>
+                        <label id="lblBalance" class="form-label m-0 fs-6"></label>
                     </div>
-                    <div class="col">
-                        <label class="form-label" for="qty">QtyOnHand:</label>
-                        <input type="text" class="form-control" id="qty" placeholder="">
-
+                    <div class="col-auto d-flex justify-content-center mt-5">
+                        <button type="submit" class="btn btn-success">Place Order</button>
                     </div>
+                    <!--            enter-total-div /////////////////////-->
+                </section>
+                <!--          amount-details ///////////////////-->
+            </section>
+            <!--          place-order-content ///////////////////////-->
+        </section>
+        <!--      table///////////////////////////////////////////////////////////////-->
+        <section id="order-table" class="pt-5 rounded-4 bg-light">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col" class="bg-success text-white">Item Code</th>
+                    <th scope="col" class="bg-success text-white">Item Name</th>
+                    <th scope="col" class="bg-success text-white">Unit Price</th>
+                    <th scope="col" class="bg-success text-white">Quantity</th>
+                    <th scope="col" class="bg-success text-white">Total</th>
+                </tr>
+                </thead>
+                <tbody id="tbody-orderCart" class="table-group-divider">
+                </tbody>
+            </table>
+        </section>
 
-                </div>
-            </div>
-
-            <div class="container text-center">
-                <div class="row">
-                    <div class="col">
-                        <label class="form-label" for="Oqty">OrderQty:</label>
-                        <input type="text" class="form-control" id="Oqty" placeholder="">
-
-                    </div>
-                    <div class="col">
-                        <button type="button" class="btn btn-danger" style="margin-top: 70px;">Add Item</button>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-
-        <!-- total part -->
-
-        <div class="col" style="height: 330px; height: 340px; width: auto; background-color: #e1ffbf;">
-            <!-- code here -->
-
-            <div class="container text-center">
-                <div class="row">
-                    <div class="col" style="color: blue;font-size: 30px;">
-                        Total
-                        <label for="exampleFormControlInput1" class="form-label"
-                               style="font-size: 40px;color: red;">1000.00</label>
-
-                    </div>
-                </div>
-            </div>
-
-            <div class="container text-center">
-                <div class="row">
-                    <div class="col">
-                        <label class="form-label" for="cash">Cash:</label>
-                        <input type="text" class="form-control" id="cash" placeholder="">
-                    </div>
-                </div>
-            </div>
-
-            <div class="container text-center">
-                <div class="row">
-                    <div class="col">
-                        Balance :
-                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
-                    </div>
-                </div>
-            </div>
-
-            <div class="container text-center">
-                <div class="row">
-                    <div class="col">
-                        <button type="button" class="btn btn-primary" style="margin-top: 30px;">Purchase</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="row mt-1 mt-md-2 mt-lg-5 justify-content-around">
-        <div class="col-10">
-
-            <div class="customeTableDiv">
-                <table class="table bg-light table-bordered w-100 h-100 table-hover">
-                    <thead class="bg-success text-light text-center">
-                    <tr>
-                        <th>Item Code</th>
-                        <th>Item Name</th>
-                        <th>Price</th>
-                        <th>Quantity</th>
-                        <th>Total</th>
-                    </tr>
-                    </thead>
-                    <tbody id="customerTable">
-                    <tr>
-                        <td>I002</td>
-                        <td>Soap</td>
-                        <td>200.00</td>
-                        <td>2</td>
-                        <td>400.00</td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
+    </section>
 </section>
+
 
 <script src="assests/bootstrap-5.3.2-dist/bootstrap-5.3.2-dist/js/code.jquery.com_jquery-3.7.1.min.js"></script>
 
 <script>
-    var customer = document.querySelector("#customer");
+    var customer = document.querySelector("#customer-page");
     customer.style.display = 'none';
 
-    var item = document.querySelector("#item");
+    var item = document.querySelector("#item-page");
     item.style.display = 'none';
 
-    var order = document.querySelector("#order");
+    var order = document.querySelector("#order-page");
     order.style.display = 'none';
 
     var header = document.querySelector("#header");
     header.style.display = 'none';
 
-    var dashboard = document.querySelector("#dashboard");
+    var dashboard = document.querySelector("#home-page");
 
     var customerClick = document.querySelector("#customerClick");
 
