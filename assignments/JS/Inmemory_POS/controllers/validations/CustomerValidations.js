@@ -13,10 +13,10 @@ function clearCustomerInputFields() {
     $("#txtCustomerID,#txtCustomerName,#txtCustomerAddress,#txtCustomerSalary,#txtCustomerSearch").val("");
     $("#txtCustomerID,#txtCustomerName,#txtCustomerAddress,#txtCustomerSalary").css("border", "1px solid #ced4da");
     $("#txtCustomerID").focus();
-    setBtn();
+    setCustomerBtn();
 }
 
-setBtn();
+setCustomerBtn();
 
 $("#txtCustomerID,#txtCustomerName,#txtCustomerAddress,#txtCustomerSalary").on("keydown keyup", function (e) {
     let indexNo = c_vArray.indexOf(c_vArray.find((c) => c.field.attr("id") == e.target.id));
@@ -25,42 +25,42 @@ $("#txtCustomerID,#txtCustomerName,#txtCustomerAddress,#txtCustomerSalary").on("
         e.preventDefault();
     }
 
-    checkValidations(c_vArray[indexNo]);
+    checkCustomerValidations(c_vArray[indexNo]);
 
-    setBtn();
+    setCustomerBtn();
 
     if (e.key == "Enter"){
 
         if (e.target.id != c_vArray[c_vArray.length - 1].field.attr("id")) {
 
-            if (checkValidations(c_vArray[indexNo])) {
+            if (checkCustomerValidations(c_vArray[indexNo])) {
                 c_vArray[indexNo + 1].field.focus();
             }
         } else {
-            if (checkValidations(c_vArray[indexNo])) {
+            if (checkCustomerValidations(c_vArray[indexNo])) {
                 saveCustomer();
             }
         }
     }
 })
 
-function checkAll() {
+function checkAllCustomers() {
     for (let i = 0; i < c_vArray.length; i++) {
-        if (!checkValidations(c_vArray[i])) return false;
+        if (!checkCustomerValidations(c_vArray[i])) return false;
     }
     return true
 }
 
-function checkValidations(object) {
+function checkCustomerValidations(object) {
     if (object.regEX.test(object.field.val())) {
-        setBorder(true, object);
+        setCustomerBorder(true, object);
         return true;
     }
-    setBorder(false, object);
+    setCustomerBorder(false, object);
     return false;
 }
 
-function setBorder(bol, ob) {
+function setCustomerBorder(bol, ob) {
     if (!bol) {
         if (ob.field.val().length >= 1) {
             ob.field.css("border", "2px solid red");
@@ -78,12 +78,12 @@ function setBorder(bol, ob) {
     }
 }
 
-function setBtn() {
+function setCustomerBtn() {
     $("#btnCustomerDelete").prop("disabled", true);
     $("#btnCustomerUpdate").prop("disabled", true);
 
 
-    if (checkAll()){
+    if (checkAllCustomers()){
         $("#btnCustomerSave").prop("disabled", false);
     } else {
         $("#btnCustomerSave").prop("disabled", true);

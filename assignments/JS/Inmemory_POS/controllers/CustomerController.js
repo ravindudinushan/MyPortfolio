@@ -1,7 +1,10 @@
+function customerInitialize() {
+    getAllCustomers();
+}
 getAllCustomers();
 
 $('#btnCustomerSave').click(function () {
-    if (checkAll()) {
+    if (checkAllCustomers()) {
         saveCustomer();
     } else {
         alert("Please check the input fields");
@@ -10,10 +13,10 @@ $('#btnCustomerSave').click(function () {
 
 $("#btnCustomerUpdate").click(function () {
     let id = $("#txtCustomerID").val();
-    if (checkAll()) {
+    if (checkAllCustomers()) {
         updateCustomer(id);
     } else {
-        alert("Please check the input fields")
+        alert("Please check the input fields!");
     }
 });
 
@@ -22,35 +25,37 @@ $("#btnCustomerDelete").click(function () {
 
     let consent = confirm("Do you want to delete ?");
     if (consent) {
-        let response = deleteCustomer(id);
-        if (response) {
-            clearCustomerInputFields()
-            getAllCustomers();
-            alert("Customer Deleted");
-        } else {
-            alert("Customer Not Removed. Invalid Customer");
-        }
-    }
-});
+                let response = deleteCustomer(id);
+                if (response) {
+                    clearCustomerInputFields()
+                    getAllCustomers();
+                    alert("Customer Deleted");
+                } else {
+                    alert("Customer Not Removed. Invalid Customer");
+                }
+            } else {
+                alert("Customer data is safe!");
+            }
+        });
 
 $("#btnCustomerClear").click(function () {
     clearCustomerInputFields()
 });
 
 $("#btnCustomerSearch").click(function () {
-    if ($("#txtCustomerSearch") != null) {
+    if ($("#txtCustomerSearch").val() != "") {
         let option = $("#cmbCustomerSearch").val();
 
         $("#btnCustomerDelete").prop("disabled", false);
         $("#btnCustomerUpdate").prop("disabled", false);
 
         if (option == "ID"){
-             let customerByID = searchCustomerByID($("#txtCustomerSearch").val());
-             if (customerByID != null){
-                 setCustomerTextFieldValues(customerByID.id, customerByID.name, customerByID.address, customerByID.salary);
-             } else {
-                 alert("Invalid ID");
-             }
+            let customerByID = searchCustomerByID($("#txtCustomerSearch").val());
+            if (customerByID != null){
+                setCustomerTextFieldValues(customerByID.id, customerByID.name, customerByID.address, customerByID.salary);
+            } else {
+                alert("Invalid ID");
+            }
         } else if (option == "Name") {
             let customerByName = searchCustomerByName($("#txtCustomerSearch").val());
             if (customerByName != null){
@@ -86,6 +91,8 @@ function saveCustomer() {
         clearCustomerInputFields()
         getAllCustomers();
 
+        alert("Customer saved successfully!");
+
     } else {
         alert("Customer already exits !");
     }
@@ -93,23 +100,26 @@ function saveCustomer() {
 
 function updateCustomer(id) {
     if (searchCustomer(id) == undefined) {
-        alert("No such Customer..please check the ID");
+        alert("Invalid ID..please check the ID");
     } else {
-        let consent = confirm("Do you want to update this customer.?");
-        if (consent) {
-            let customer = searchCustomer(id);
+        let consentItem = confirm("Do you want to update this Item.?");
+        if (consentItem) {
+                    let customer = searchCustomer(id);
 
-            let customerName = $("#txtCustomerName").val();
-            let customerAddress = $("#txtCustomerAddress").val();
-            let customerSalary = $("#txtCustomerSalary").val();
+                    let customerName = $("#txtCustomerName").val();
+                    let customerAddress = $("#txtCustomerAddress").val();
+                    let customerSalary = $("#txtCustomerSalary").val();
 
-            customer.name = customerName;
-            customer.address = customerAddress;
-            customer.salary = customerSalary;
+                    customer.name = customerName;
+                    customer.address = customerAddress;
+                    customer.salary = customerSalary;
 
-            getAllCustomers();
-            clearCustomerInputFields()
-        }
+                    getAllCustomers();
+                    clearCustomerInputFields()
+                    alert("Customer updated successfully!");
+                } else {
+                    alert("Customer data is safe!");
+                }
     }
 }
 
