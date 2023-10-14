@@ -1071,7 +1071,7 @@ section.page-footer{
         display: none;
     }
 
-    [type="submit"] {
+    #visible {
         display: none;
     }
     .footer-col-2 .footer-col-desc a {
@@ -1155,9 +1155,10 @@ section.page-footer{
         display: none;
     }
 
-    [type="submit"] {
+    #visible {
         display: none;
     }
+
     .footer-col-2 .footer-col-desc a {
         font-size: 13px;
     }
@@ -1237,7 +1238,7 @@ section.page-footer{
         display: none;
     }
 
-    [type="submit"] {
+    #visible {
         display: none;
     }
 
@@ -1316,7 +1317,7 @@ section.page-footer{
         display: none;
     }
 
-    [type="submit"] {
+    #visible {
         display: none;
     }
 
