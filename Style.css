@@ -9,6 +9,7 @@
     scroll-behavior: smooth;
     font-family: Noto+Sans+Vithkuqi;
 }
+
 :root{
     --bg-color: #000000;
     --second-bg-color: #383737;
@@ -231,10 +232,12 @@ span{
     right: 5rem;
     background-color: var(--light-heading-color);
 }
+
 .about-desc{
     flex-basis: 65%;
     margin-left: 3%;
 }
+
 .about-image::before{
     position: absolute;
     content: '';
@@ -245,6 +248,7 @@ span{
     left: -10px;
     z-index: 1;
 }
+
 .about-image img{
     position: relative;
     width: 100%;
@@ -253,6 +257,7 @@ span{
     object-fit: cover;
     z-index: 2;
 }
+
 .about-image .social-media{
     position: absolute;
     top: 50%;
@@ -263,12 +268,14 @@ span{
     padding: 15px;
     border-radius: 5px;
 }
+
 .about-image .social-media i{
     color: var(--text-color);
     margin: 8px 0px;
     cursor: pointer;
     transition: 0.4s;
 }
+
 .about-image .social-media i:hover{
     transform: scale(1.2);
 }
@@ -421,7 +428,6 @@ span{
 
 }
 
-
 .education-content .content{
     position: relative;
     padding: 1.5rem;
@@ -448,7 +454,6 @@ span{
     width: 100%;
 }
 
-
 .education-content .content.year{
     font-size: 1.5rem;
     color: var(--main-color);
@@ -463,6 +468,7 @@ span{
 .education-content .content h3{
     font-size: 2rem;
 }
+
 .education-content .content p {
     font-size: 1.6rem;
     padding-top: .5rem;
@@ -476,7 +482,6 @@ span{
     width: 70px;
     transition-duration: .5s;
 }
-
 
 /* Certificate design ------------ ----------------*/
 
@@ -519,7 +524,6 @@ span{
     transform: scale(1.1);
 }
 
-
 .certificate-box .certificate-layer{
     position: absolute;
     bottom: 0;
@@ -541,7 +545,6 @@ span{
 .certificate-box:hover .certificate-layer{
     opacity:2;
 }
-
 
 .certificate-layer h4{
     font-size: 3rem;
@@ -626,7 +629,6 @@ span{
     transform: translateY(0);
 }
 
-
 .portfolio-layer h4{
     font-size: 3rem;
 }
@@ -651,7 +653,6 @@ span{
     font-size: 2rem;
     color: var(--second-bg-color);
 }
-
 
 /*My Assignment ----------------------*/
 
@@ -696,7 +697,6 @@ span{
     transform: scale(1.1);
 }
 
-
 .assignment-box .assignment-layer{
     position: absolute;
     bottom: 0;
@@ -718,7 +718,6 @@ span{
 .assignment-box:hover .assignment-layer{
     opacity:1;
 }
-
 
 .assignment-layerh4{
     font-size: 3rem;
@@ -802,10 +801,6 @@ span{
 
 }
 
-
-
-
-
 /*Contact form  --------------------------------------------*/
 .contact{
     background: var(--bg-color);
@@ -865,53 +860,64 @@ section.page-footer{
     background-color: var(--second-bg-color);
     color: var(--text-color);
 }
+
 .page-footer .footer-contents{
     width: 100%;
     display: grid;
     grid-template-columns: 3fr 2fr 2fr;
     grid-gap: 40px;
 }
+
 .footer-contents .footer-col{
     display: flex;
     flex-direction: column;
 }
+
 .footer-contents .footer-col .footer-col-title{
     margin-bottom: 20px;
 }
+
 .footer-col .footer-col-title h3{
     font-size: 24px;
     color: var(--light-heading-color);
     text-transform: capitalize;
 }
+
 .footer-contents .footer-col .footer-col-desc{
     display: flex;
     flex-direction: column;
 }
+
 .footer-col-1 .footer-col-desc p{
     line-height: 1.4;
     color: var(--light-heading-color);
     margin-bottom: 10px;
     font-size: 1.3rem;
 }
+
 .footer-col-1 .footer-col-desc span{
     color: var(--light-heading-color);
     margin-bottom: 17px;
     display: inline-block;
     font-size: 1.3rem;
 }
+
 .footer-col-1 .footer-col-desc span:nth-of-type(1){
     margin-top: 15px;
     font-size: 1.3rem;
 }
+
 .footer-col-1 .footer-social-media{
     display: flex;
     margin-top: 20px;
 }
+
 .footer-col-1 .footer-social-media a{
     text-decoration: none;
     color: var(--light-heading-color);
     margin-right: 10px;
 }
+
 .footer-col-1 .footer-social-media a i{
     width: 35px;
     height: 35px;
@@ -925,11 +931,13 @@ section.page-footer{
     border-radius: 5px;
     transition: all 0.3s;
 }
+
 .footer-col-1 .footer-social-media a i:hover{
     background-color: transparent;
     border: 1px solid var(--main-color);
     color: var(--main-color);
 }
+
 .footer-col-2 .footer-col-desc a{
     text-decoration: none;
     font-size: 16px;
@@ -938,14 +946,17 @@ section.page-footer{
     margin-bottom: 17px;
     transition: 0.3s;
 }
+
 .footer-col-2 .footer-col-desc a:hover{
     color: var(--main-color);
 }
+
 .footer-col-3 .footer-col-desc p{
     color: var(--text-color);
     line-height: 1.4;
     font-size: 1.3rem;
 }
+
 .footer-col-3 .footer-col-desc input{
     width: 100%;
     padding: 15px;
@@ -955,16 +966,19 @@ section.page-footer{
     border: none;
     border-radius: 25px;
 }
+
 .copy-rights{
     width: 100%;
     padding: 30px 8%;
     background-color: var(--bg-color);
     border-top: 1px solid #333;
 }
+
 .copy-rights p{
     color: var(--light-heading-color);
     text-align: center;
 }
+
 .copy-rights p b{
     color: var(--main-color);
 }
@@ -1046,6 +1060,7 @@ section.page-footer{
     #visible {
         display: none;
     }
+
     .footer-col-2 .footer-col-desc a {
         font-size: 12px;
         position: relative;
@@ -1149,7 +1164,6 @@ section.page-footer{
         right: 14px;
         position: relative;
         bottom: 11px;
-        /*display: none;*/
     }
 
     .navbar a {
