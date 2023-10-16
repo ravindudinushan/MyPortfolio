@@ -991,6 +991,10 @@ section.page-footer{
         padding: 0.3rem;
     }
 
+    .topBar {
+        display: none;
+    }
+
     .home-content h1 {
         font-size: 4.6rem;
     }
@@ -1068,6 +1072,9 @@ section.page-footer{
         position: relative;
         top: 17px;
         padding: 0.3rem;
+    }
+    .topBar {
+        display: none;
     }
 
     .home-content h1 {
