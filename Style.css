@@ -1174,6 +1174,15 @@ section.page-footer{
         padding: 0.3rem;
     }
 
+    .topBar {
+        width: 100%;
+        background-color: #ffff00;
+        height: 5px;
+        position: absolute;
+        left: 0rem;
+        top: 9.8rem;
+    }
+
     .home-content h1 {
         font-size: 4.6rem;
     }
@@ -1186,7 +1195,7 @@ section.page-footer{
     .home-img>img {
         position: relative;
         width: 30vw;
-        top: 210px;
+        top: 190px;
         left: 18px;
     }
 
@@ -1254,6 +1263,15 @@ section.page-footer{
         padding: 0.3rem;
     }
 
+    .topBar {
+        width: 100%;
+        background-color: #ffff00;
+        height: 5px;
+        position: absolute;
+        left: 0rem;
+        top: 9.8rem;
+    }
+
     .home-content h1 {
         font-size: 4.6rem;
     }
@@ -1265,7 +1283,7 @@ section.page-footer{
     .home-img > img {
         position: relative;
         width: 30vw;
-        top: 69px;
+        top: 47px;
         left: 18px;
     }
 
