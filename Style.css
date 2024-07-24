@@ -346,6 +346,10 @@ span{
     transition: .5s ease;
 }
 
+.services-box p{
+    font-family: 'Poppins', sans-serif;
+}
+
 .services-container .services-box:hover {
     border-color: var(--main-color);
     transform: scale(1.02);
