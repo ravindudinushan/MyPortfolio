@@ -29,10 +29,10 @@ My Skills
 My Certificates
 <img width="1394" alt="Screenshot 2024-03-04 at 19 12 39" src="assets/MyPortfolio/Screenshot 2024-09-01 223532.png">
 
-Project
-<img width="1394" alt="Screenshot 2024-03-04 at 19 12 49" src="assets/MyPortfolio/">
+My Projects
+<img width="1394" alt="Screenshot 2024-03-04 at 19 12 49" src="assets/MyPortfolio/Screenshot 2024-09-01 223558.png">
 
-My Assignment
+My Assignments
 <img width="1394" alt="Screenshot 2024-03-04 at 19 12 58" src="assets/MyPortfolio/">
 
 My Services
