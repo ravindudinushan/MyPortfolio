@@ -1,6 +1,6 @@
 
 # My Portfolio
-<img width="1394" alt="Screenshot 2024-03-04 at 18 59 14" src="assets/MyPortfolio/Screenshot%202024-09-01%20223427.png">
+<img width="1394" alt="Screenshot 2024-03-04 at 18 59 14" src="assets/MyPortfolio/Screenshot 2024-09-01 223427.png">
 
 # 👨🏻‍💻 Technology & Frameworks
 <ul>
