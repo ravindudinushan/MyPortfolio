@@ -35,8 +35,5 @@ My Projects
 My Assignments
 <img width="1394" alt="Screenshot 2024-03-04 at 19 12 58" src="assets/MyPortfolio/Screenshot 2024-09-01 223617.png">
 
-My Services
-<img width="1394" alt="Screenshot 2024-03-04 at 19 13 27" src="assets/MyPortfolio/">
-
-Contact
-<img width="1394" alt="Screenshot 2024-03-04 at 19 14 10" src="assets/MyPortfolio/">
+Contact Me
+<img width="1394" alt="Screenshot 2024-03-04 at 19 14 10" src="assets/MyPortfolio/Screenshot 2024-09-01 223644.png">
