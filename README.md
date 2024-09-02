@@ -23,8 +23,8 @@ About Me
 My Services
 <img width="1394" alt="Screenshot 2024-03-04 at 19 12 18" src="assets/MyPortfolio/Screenshot 2024-09-01 223505.png">
 
-Certificate
-<img width="1394" alt="Screenshot 2024-03-04 at 19 12 29" src="assets/MyPortfolio/">
+My Skills
+<img width="1394" alt="Screenshot 2024-03-04 at 19 12 29" src="assets/MyPortfolio/Screenshot 2024-09-01 223517.png">
 
 Skills
 <img width="1394" alt="Screenshot 2024-03-04 at 19 12 39" src="assets/MyPortfolio/">
