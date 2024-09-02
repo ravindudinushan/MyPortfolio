@@ -33,7 +33,7 @@ My Projects
 <img width="1394" alt="Screenshot 2024-03-04 at 19 12 49" src="assets/MyPortfolio/Screenshot 2024-09-01 223558.png">
 
 My Assignments
-<img width="1394" alt="Screenshot 2024-03-04 at 19 12 58" src="assets/MyPortfolio/">
+<img width="1394" alt="Screenshot 2024-03-04 at 19 12 58" src="assets/MyPortfolio/Screenshot 2024-09-01 223617.png">
 
 My Services
 <img width="1394" alt="Screenshot 2024-03-04 at 19 13 27" src="assets/MyPortfolio/">
