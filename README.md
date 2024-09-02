@@ -26,8 +26,8 @@ My Services
 My Skills
 <img width="1394" alt="Screenshot 2024-03-04 at 19 12 29" src="assets/MyPortfolio/Screenshot 2024-09-01 223517.png">
 
-Skills
-<img width="1394" alt="Screenshot 2024-03-04 at 19 12 39" src="assets/MyPortfolio/">
+My Certificates
+<img width="1394" alt="Screenshot 2024-03-04 at 19 12 39" src="assets/MyPortfolio/Screenshot 2024-09-01 223532.png">
 
 Project
 <img width="1394" alt="Screenshot 2024-03-04 at 19 12 49" src="assets/MyPortfolio/">
